@@ -1,16 +1,16 @@
 from random import choice
 
 
-def processar_resposta(texto_recebido, nome_usuario):
+def create_answer(input_text, username):
     mensagem_erro = ["Desculpe, não entendi :/",
                      "Não entendi, poderia escrever com outras palavras?",
                      "Hmmmm, essa eu não sei.",
                      "Não entendi, poderia reformular a pergunta?"
                      ]
 
-    texto_recebido = texto_recebido.lower()
+    input_text = input_text.lower()
 
-    if "comprovante" in texto_recebido or "declaração" in texto_recebido or "declaraçao" in texto_recebido:
+    if "comprovante" in input_text or "declaração" in input_text or "declaraçao" in input_text:
         return ("\U0001F4C3 Para emitir o comprovante de matricula ou declaração de vínculo você deve:"
                 "\n 1- entrar no sigaa https://sigs.ufrpe.br/sigaa/verTelaLogin."
                 "\n 2- clique na aba ensino"
@@ -21,7 +21,7 @@ def processar_resposta(texto_recebido, nome_usuario):
                 "coordenacao.eletrica.uacsa@ufrpe.br\n"
                 "coordenacao.eletronica.uacsa@ufrpe.br\n"
                 "coordenacao.mecanica.uacsa@ufrpe.br\n")
-    elif "dispensa" in texto_recebido or "dispensa de disciplina" in texto_recebido or "dispensar cadeira" in texto_recebido or "dispensar" in texto_recebido:
+    elif "dispensa" in input_text or "dispensa de disciplina" in input_text or "dispensar cadeira" in input_text or "dispensar" in input_text:
         return ("\U0001F6AB Requisitos para dispensar disciplina:"
                 "\n 1- os conteúdos das disciplinas devem ser equivalentes em 80%"
                 "\n 2- a carga horária deve ser igual ou superior"
@@ -32,7 +32,7 @@ def processar_resposta(texto_recebido, nome_usuario):
                 "coordenacao.eletrica.uacsa@ufrpe.br\n"
                 "coordenacao.eletronica.uacsa@ufrpe.br\n"
                 "coordenacao.mecanica.uacsa@ufrpe.br\n")
-    elif "estágio" in texto_recebido or "estagio" in texto_recebido or "eso" in texto_recebido:
+    elif "estágio" in input_text or "estagio" in input_text or "eso" in input_text:
         return ("\U0001F477 instruções para formalizar estágio"
                 "\n lista com instruções:"
                 "\n 1- Realizar matrícula no sig@ a matrícula fica pendente até o envio do termo de compromisso"
@@ -41,7 +41,7 @@ def processar_resposta(texto_recebido, nome_usuario):
                 "\n 4- Enviar por e-mail o termo de compromisso para assinatura de todas as parte."
                 "\n 5- os estudantes que farão estágio presencial, recolher as assinaturas a punho e enviar documento escaneado\n"
                 "\n  \U0001F4E9Para saber mais envie um email com sua dúvida para cge.preg@ufrpe.br")
-    elif "acompanhado" in texto_recebido or "acompanhados" in texto_recebido or "desligáveis" in texto_recebido or "desligaveis" in texto_recebido or "desligavel" in texto_recebido or "desligável" in texto_recebido or "desligado" in texto_recebido or "desligamento" in texto_recebido:
+    elif "acompanhado" in input_text or "acompanhados" in input_text or "desligáveis" in input_text or "desligaveis" in input_text or "desligavel" in input_text or "desligável" in input_text or "desligado" in input_text or "desligamento" in input_text:
         return ("\U0001F198 instruções para alunos acompanhados e desligáveis:"
                 "\n o discente será desligado se:"
                 "\n 1- Ultrapassar o prazo máximo de integralização curricular que é igual ao prazo normal mais 70% do prazo normal"
