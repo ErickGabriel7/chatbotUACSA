@@ -4,7 +4,8 @@ import requests
 
 app = Flask(__name__)
 
-BOT_TOKEN = "1418502829:AAHem_GKULQO7eDZtnKNcGRCbUR_x6Fv3Z8" #Não disponibilizar para outras pessoas!
+BOT_TOKEN = "1418502829:AAHem_GKULQO7eDZtnKNcGRCbUR_x6Fv3Z8"  # Não disponibilizar para outras pessoas!
+
 
 @app.route('/nova-mensagem', methods=["POST"])
 def new_message():
@@ -18,12 +19,13 @@ def new_message():
     # falar para o telegram que tudo ocorreu bem
     return {'ok': True}
 
+
 def montar_resposta(body):
-    #verificando se a mensagem e um texto
+    # verificando se a mensagem e um texto
     if 'text' in body['message']:
         texto_recebido = body['message']['text']
         nome_usuario = body['message']['from']['first_name']
-        #quando um novo usuário inicia uma conversa com o bot, a primeira mensagem é sempre '\start'
+        # quando um novo usuário inicia uma conversa com o bot, a primeira mensagem é sempre '\start'
         if texto_recebido == '/start':
             return f"Olá, {nome_usuario}!\nEu sou o chatbot de dúvidas da UACSA \U0001F601 \nEm que posso ajudar?"
         return processar_resposta(texto_recebido, nome_usuario)
