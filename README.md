@@ -29,3 +29,13 @@ export FLASK_APP=flask_app.py
 export FLASK_ENV=development
 flask run
 ```
+
+## Desenvolvimento
+
+- Escreva nomes de funções, parâmetros e variáveis em inglês.
+- Após modificar um arquivo Python use o comando Code/Reformat File
+
+## Produção
+
+Ao colocar em produção é preciso inserir o token do bot do Telegram no arquivo
+chatbotUACSA/telegram/bot_token

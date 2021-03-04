@@ -1,3 +1,3 @@
-set FLASK_APP=flask_app.py
+set FLASK_APP=chatbotUACSA.telegram.telegram
 set FLASK_ENV=development
 flask run
