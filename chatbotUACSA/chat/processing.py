@@ -11,7 +11,7 @@ def create_answer(input_text, username):
 
     input_text = clean_text(input_text)
 
-    if "comprovante" in input_text or "declaracao" in input_text:
+    if "comprovante" in input_text or "declaracao" in input_text or "matricula" in input_text:
         return ("\U0001F4C3 Para emitir o comprovante de matricula ou declaração de vínculo você deve:"
                 "\n 1- entrar no sigaa https://sigs.ufrpe.br/sigaa/verTelaLogin."
                 "\n 2- clique na aba ensino"
