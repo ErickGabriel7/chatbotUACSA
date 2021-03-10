@@ -5,7 +5,7 @@ from chatbotUACSA.chat.processing import create_answer
 
 app = Flask(__name__)
 
-with open('chatbotUACSA/telegram/bot_token', 'r') as file:
+with open('bot_token', 'r') as file:
     BOT_TOKEN = file.readline()
 
 
