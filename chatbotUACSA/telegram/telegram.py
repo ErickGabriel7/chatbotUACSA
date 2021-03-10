@@ -58,3 +58,15 @@ def send_photo(photo_adress, body):
                 "chat_id": body['message']['chat']['id']
             }
             get(endpoint, params, files={'photo': photo})
+
+
+def send_document(document_adress, body):
+    if app.config['ENV'] == 'development':
+        print('\n [ENVIANDO IMAGEM]:', document_adress, '\n')
+    else:
+        with open(document_adress, 'rb') as document:
+            endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendDocument"
+            params = {
+                "chat_id": body['message']['chat']['id']
+            }
+            get(endpoint, params, files={'document': document})
