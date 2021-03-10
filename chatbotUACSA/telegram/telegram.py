@@ -1,5 +1,6 @@
 from flask import Flask, request
 from requests import get
+import git
 
 from chatbotUACSA.chat.processing import create_answer
 
@@ -20,6 +21,17 @@ def receive_message():
 
     # falar para o telegram que tudo ocorreu bem
     return {'ok': True}
+
+
+@app.route('/update_server', methods=['POST'])
+def webhook():
+    if request.method == 'POST':
+        repo = git.Repo('path/to/git_repo')
+        origin = repo.remotes.origin
+        origin.pull()
+        return 'Updated PythonAnywhere successfully', 200
+    else:
+        return 'Wrong event type', 400
 
 
 def process_message(body):
