@@ -51,5 +51,10 @@ def send_photo(photo_adress, body):
     if app.config['ENV'] == 'development':
         print('\n [ENVIANDO IMAGEM]:', photo_adress, '\n')
     else:
-        # adicionar código para enviar imagem
-        pass
+        # a imagem precisa estar no servidor, não funciona para url
+        with open(photo_adress, 'rb') as photo:
+            endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
+            params = {
+                "chat_id": body['message']['chat']['id']
+            }
+            get(endpoint, params, files={'photo': photo})
