@@ -47,9 +47,9 @@ def send_text_message(text, body):
         get(endpoint, params)
 
 
-def send_picture(picture, body):
+def send_photo(photo_adress, body):
     if app.config['ENV'] == 'development':
-        print('\n [ENVIANDO IMAGEM]:', picture, '\n')
+        print('\n [ENVIANDO IMAGEM]:', photo_adress, '\n')
     else:
         # adicionar código para enviar imagem
         pass
