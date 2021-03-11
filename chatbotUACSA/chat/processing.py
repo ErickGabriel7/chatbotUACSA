@@ -1,7 +1,7 @@
 from random import choice
 from chatbotUACSA.utils import clean_text
 
-
+#comentario teste
 def create_answer(input_text, username):
     mensagem_erro = ["Desculpe, não entendi :/",
                      "Não entendi, poderia escrever com outras palavras?",
