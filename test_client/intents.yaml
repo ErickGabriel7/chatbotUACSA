@@ -14,7 +14,9 @@ i_declaracao_de_vinculo:
 i_estagio_tecnologo:
   utterances:
     - estagio+tecnico
-    - estagio+tecnilogo
+    - estagio+tecnologo
+    - estagio+tecnologico
+    - eso+tecnologo
     - eso+tecnologo
     - eso+tecnico
 
