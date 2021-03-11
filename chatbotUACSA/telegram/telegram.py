@@ -26,7 +26,7 @@ def receive_message():
 @app.route('/update_server', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo()
+        repo = git.Repo('chatbotUACSA/.git')
         origin = repo.remotes.origin
         origin.pull()
         app.logger.info('Updated PythonAnywhere successfully')
