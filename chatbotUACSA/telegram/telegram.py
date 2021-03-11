@@ -6,8 +6,12 @@ from chatbotUACSA.chat.processing import create_answer
 
 app = Flask(__name__)
 
-with open('chatbotUACSA/chatbotUACSA/telegram/bot_token', 'r') as file:
-    BOT_TOKEN = file.readline()
+if app.config['ENV'] == 'development':
+    with open('chatbotUACSA/telegram/bot_token', 'r') as file:
+        BOT_TOKEN = file.readline()
+else:
+    with open('chatbotUACSA/chatbotUACSA/telegram/bot_token', 'r') as file:
+        BOT_TOKEN = file.readline()
 
 
 @app.route('/nova-mensagem', methods=["POST"])
