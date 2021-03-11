@@ -1,0 +1,23 @@
+i_atestado_de_matricula:
+  responses:
+    - "Essa é a declaração de matrícula"
+
+i_declaracao_de_vinculo:
+  responses:
+    - "Essa é a declaração de vínculo"
+
+i_estagio_tecnologo:
+  responses:
+    - " Essa é a informação sobre estagio tecnologo"
+
+i_estagio_bacharel:
+  responses:
+    - " Essa é a informação sobre estagio bacharel"
+
+i_dispensa:
+  responses:
+    - "  Essa é a informação sobre dispensa"
+
+i_desligamento:
+  responses:
+    - " Essa é a informação sobre desligamento"
