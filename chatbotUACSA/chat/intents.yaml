@@ -1,0 +1,46 @@
+i_atestado_de_matricula:
+  utterances:
+    - declaracao+matricula
+    - comprovante+matricula
+    - matricula
+    - comprovante
+
+i_declaracao_de_vinculo:
+  utterances:
+    - declaracao+vinculo
+    - comprovante+vinculo
+    - vinculo
+i_tipo_de_estagio:
+  utterances:
+    - estagio
+    - eso
+i_estagio_tecnologo:
+  utterances:
+    - estagio+tecnico
+    - estagio+tecnologo
+    - estagio+tecnologico
+    - eso+tecnologo
+    - eso+tecnologo
+    - eso+tecnico
+    - tecnico
+
+
+i_estagio_bacharel:
+  utterances:
+    - estagio+bacharel
+    - estagio+bacharelado
+    - eso+bacharel
+    - bacharel
+
+i_dispensa:
+  utterances:
+    - dispensa
+    - dispensar
+
+i_desligamento:
+  utterances:
+    - desligado
+    - acompanhado
+    - desligar
+    - acompanhamento
+    - desligamento
