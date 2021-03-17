@@ -66,26 +66,44 @@ def send_text_message(text, body):
         get(endpoint, params)
 
 
-def send_photo(photo_adress, body):
+def send_photo(photo_adress, body, caption=None):
     if app.config['ENV'] == 'development':
         print('\n [ENVIANDO IMAGEM]:', photo_adress, '\n')
     else:
         # a imagem precisa estar no servidor, não funciona para url
-        with open(photo_adress, 'rb') as photo:
-            endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
-            params = {
-                "chat_id": body['message']['chat']['id']
-            }
-            get(endpoint, params, files={'photo': photo})
+        if caption is None:
+            with open(photo_adress, 'rb') as photo:
+                endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
+                params = {
+                    "chat_id": body['message']['chat']['id']
+                }
+                get(endpoint, params, files={'photo': photo})
+        else:
+            with open(photo_adress, 'rb') as photo:
+                endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
+                params = {
+                    "chat_id": body['message']['chat']['id'],
+                    "caption": caption
+                }
+                get(endpoint, params, files={'photo': photo})
 
 
-def send_document(document_adress, body):
+def send_document(document_adress, body, caption=None):
     if app.config['ENV'] == 'development':
         print('\n [ENVIANDO IMAGEM]:', document_adress, '\n')
     else:
-        with open(document_adress, 'rb') as document:
-            endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendDocument"
-            params = {
-                "chat_id": body['message']['chat']['id']
-            }
-            get(endpoint, params, files={'document': document})
+        if caption is None:
+            with open(document_adress, 'rb') as document:
+                endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendDocument"
+                params = {
+                    "chat_id": body['message']['chat']['id']
+                }
+                get(endpoint, params, files={'document': document})
+        else:
+            with open(document_adress, 'rb') as document:
+                endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendDocument"
+                params = {
+                    "chat_id": body['message']['chat']['id'],
+                    "caption": caption
+                }
+                get(endpoint, params, files={'document': document})
