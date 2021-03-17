@@ -6,7 +6,7 @@ from chatbotUACSA.chat.processing import create_answer
 
 app = Flask(__name__)
 
-# teste
+# teste2
 if app.config['ENV'] == 'development':
     with open('chatbotUACSA/telegram/bot_token', 'r') as file:
         BOT_TOKEN = file.readline()
@@ -31,7 +31,7 @@ def receive_message():
 @app.route('/update_server', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('chatbotUACSA/.git')
+        repo = git.Repo('chatbotUACSA/')
         origin = repo.remotes.origin
         origin.pull()
         app.logger.info('Updated PythonAnywhere successfully')
