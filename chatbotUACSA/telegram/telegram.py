@@ -6,8 +6,13 @@ from chatbotUACSA.chat.processing import create_answer
 
 app = Flask(__name__)
 
-with open('bot_token', 'r') as file:
-    BOT_TOKEN = file.readline()
+# teste
+if app.config['ENV'] == 'development':
+    with open('chatbotUACSA/telegram/bot_token', 'r') as file:
+        BOT_TOKEN = file.readline()
+else:
+    with open('chatbotUACSA/chatbotUACSA/telegram/bot_token', 'r') as file:
+        BOT_TOKEN = file.readline()
 
 
 @app.route('/nova-mensagem', methods=["POST"])
@@ -26,7 +31,7 @@ def receive_message():
 @app.route('/update_server', methods=['POST'])
 def webhook():
     if request.method == 'POST':
-        repo = git.Repo('path/to/git_repo')
+        repo = git.Repo('chatbotUACSA/.git')
         origin = repo.remotes.origin
         origin.pull()
         app.logger.info('Updated PythonAnywhere successfully')

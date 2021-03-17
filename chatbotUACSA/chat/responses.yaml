@@ -1,0 +1,46 @@
+i_atestado_de_matricula:
+  responses:
+    - "\U0001F4C3 Para emitir o atestado de matrícula você deve:
+        \n 1- entrar no sigaa https://sigs.ufrpe.br/sigaa/verTelaLogin.
+        \n 2- realizar o login
+        \n 3- clicar na aba ensino
+        \n 4- clicar em emitir atestado de mátricula
+        \n  \U0001F4E9 Para saber mais envie um email com sua dúvida para o coordenação do seu curso:\n\n
+        coordenacao.civil.uacsa@ufrpe.br\n
+        coordenacao.materiais.uacsa@ufrpe.br\n
+        coordenacao.eletrica.uacsa@ufrpe.br\n
+        coordenacao.eletronica.uacsa@ufrpe.br\n
+        coordenacao.mecanica.uacsa@ufrpe.br\n"
+
+i_declaracao_de_vinculo:
+  responses:
+    - "\U0001F4C3 Para emitir uma declaração de vínculo você deve:
+              \n 1- entrar no sigaa https://sigs.ufrpe.br/sigaa/verTelaLogin.
+              \n 2- realizar o login
+              \n 3- clicar na aba ensino
+              \n 4- clicar em emitir declaração de vínculo
+              \n  \U0001F4E9 Para saber mais envie um email com sua dúvida para o coordenação do seu curso:\n\n
+              coordenacao.civil.uacsa@ufrpe.br\n
+              coordenacao.materiais.uacsa@ufrpe.br\n
+              coordenacao.eletrica.uacsa@ufrpe.br\n
+              coordenacao.eletronica.uacsa@ufrpe.br\n
+              coordenacao.mecanica.uacsa@ufrpe.br\n"
+i_tipo_de_estagio:
+  responses:
+    - "Qual tipo de estágio técnico ou bacharel?"
+
+i_estagio_tecnologo:
+  responses:
+    - " Essa é a informação sobre estagio tecnologo"
+
+i_estagio_bacharel:
+  responses:
+    - " Essa é a informação sobre estagio bacharel"
+
+i_dispensa:
+  responses:
+    - "  Essa é a informação sobre dispensa"
+
+i_desligamento:
+  responses:
+    - " Essa é a informação sobre desligamento"
