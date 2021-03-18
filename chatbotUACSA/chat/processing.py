@@ -1,8 +1,5 @@
 from chatbotUACSA.utils import clean_text
-from chatbotUACSA.chat.isolarcodigo import load_intents, load_responses, evaluate_intent, respond_intent
-
-intent = load_intents()
-responses = load_responses()
+from chatbotUACSA.chat.data_loading import load_intents, load_responses, evaluate_intent, respond_intent
 
 
 def create_answer(input_text):

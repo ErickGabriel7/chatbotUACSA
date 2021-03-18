@@ -10,10 +10,7 @@ i_declaracao_de_vinculo:
     - declaracao+vinculo
     - comprovante+vinculo
     - vinculo
-i_tipo_de_estagio:
-  utterances:
-    - estagio
-    - eso
+
 i_estagio_tecnologo:
   utterances:
     - estagio+tecnico
@@ -32,10 +29,17 @@ i_estagio_bacharel:
     - eso+bacharel
     - bacharel
 
+i_tipo_de_estagio:
+  utterances:
+    - estagio
+    - eso
+
 i_dispensa:
   utterances:
     - dispensa
     - dispensar
+    - isençao+disciplina
+    - aproveitamento+disciplina
 
 i_desligamento:
   utterances:

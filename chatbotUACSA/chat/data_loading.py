@@ -4,12 +4,12 @@ from chatbotUACSA.utils import clean_text
 
 
 def load_intents():
-    with open('intents.yaml', encoding='utf-8') as file:
+    with open('data/intents.yaml', encoding='utf-8') as file:
         return yaml.load(file, yaml.SafeLoader)
 
 
 def load_responses():
-    with open('responses.yaml', encoding='utf-8') as file:
+    with open('data/responses.yaml', encoding='utf-8') as file:
         return yaml.load(file, yaml.SafeLoader)
 
 
