@@ -1,5 +1,5 @@
 from chatbotUACSA.utils import clean_text
-from chatbotUACSA.chat.data_loading import evaluate_intent, respond_intent
+from .data_loading import evaluate_intent, respond_intent
 
 
 def create_answer(input_text):

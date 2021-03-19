@@ -4,3 +4,4 @@ text = ""
 while text != 'sair':
     text = input("você: ")
     resposta = create_answer(text)
+    print(resposta)

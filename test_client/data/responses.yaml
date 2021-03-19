@@ -1,0 +1,94 @@
+i_atestado_de_matricula:
+  responses:
+    - "\U0001F4C3 Para emitir o atestado de matrícula você deve:
+        \n 1- entrar no sigaa https://sigs.ufrpe.br/sigaa/verTelaLogin.
+        \n 4- clicar em emitir atestado de mátricula
+        \n 2- realizar o login
+        \n 3- clicar na aba ensino
+        \n  \U0001F4E9 Para saber mais envie um email com sua dúvida para o coordenação do seu curso:\n\n
+        coordenacao.civil.uacsa@ufrpe.br\n
+        coordenacao.materiais.uacsa@ufrpe.br\n
+        coordenacao.eletrica.uacsa@ufrpe.br\n
+        coordenacao.eletronica.uacsa@ufrpe.br\n
+        coordenacao.mecanica.uacsa@ufrpe.br\n"
+
+i_declaracao_de_vinculo:
+  responses:
+    - "\U0001F4C3 Para emitir uma declaração de vínculo você deve:
+              \n 1- entrar no sigaa https://sigs.ufrpe.br/sigaa/verTelaLogin.
+              \n 2- realizar o login
+              \n 3- clicar na aba ensino
+              \n 4- clicar em emitir declaração de vínculo
+              \n  \U0001F4E9 Para saber mais envie um email com sua dúvida para o coordenação do seu curso:\n\n
+              coordenacao.civil.uacsa@ufrpe.br\n
+              coordenacao.materiais.uacsa@ufrpe.br\n
+              coordenacao.eletrica.uacsa@ufrpe.br\n
+              coordenacao.eletronica.uacsa@ufrpe.br\n
+              coordenacao.mecanica.uacsa@ufrpe.br\n"
+
+i_estagio_tecnologo:
+  responses:
+    - " se você atende os requesitos informados no planejamento pedagógico do seu curso então:
+    \n O Estágio Supervisionado Obrigatório - Tecnológico terá uma carga horária de 165
+    \n (cento e sessenta e cinco) horas,  e deverá ser realizado em industrias ou empresas que atuem na área
+    \n de formação do tecnólogo.Quanto à avaliação da atividade de estágio, tanto para o curso de bacharelado, quanto
+    \n para o curso tecnológico, o acompanhamento dos estagiários e a verificação do rendimento do
+    \n aluno no estágio curricular serão realizados através de relatórios mensais das atividades
+    \n desenvolvidas ao longo do estágio, elaborados e encaminhados ao Professor Orientador, e
+    \n levará em conta uma frequência mínima exigida de 75% (setenta e cinco por cento), as
+    \n atividades programadas e a execução do estágio.
+    \n Ao final do estágio supervisionado, o estudante apresentará um relatório final ao
+    \n professor orientador. A partir desse relatório, o professor orientador avaliará o estágio e
+    \n atribuirá uma nota de zero a 10 (dez).\n
+       \n  \U0001F4E9 Para saber mais envie um email com sua dúvida para estagio.uacsa@ufrpe.br"
+
+i_estagio_bacharel:
+  responses:
+    - " se você atende os requesitos informados no planejamento pedagógico do seu curso então:
+            \n O Estágio Supervisionado Obrigatório - Bacharelado terá uma carga horária de 180 (cento e oitenta) horas
+            \n e poderá ser realizado na própria instituição de ensino, mediante laboratórios que congreguem
+            \n as diversas ordens práticas correspondentes aos diferentes pensamentos das Ciências Exatas
+            \n ou junto a pessoas jurídicas de direito público ou privado, sob responsabilidade da
+            \n Coordenação do Curso, e que contribua, de forma eficaz, para sua absorção pelo mercado de
+            \n trabalho. Quanto à avaliação da atividade de estágio, tanto para o curso de bacharelado, quanto
+            \n para o curso tecnológico, o acompanhamento dos estagiários e a verificação do rendimento do
+            \n aluno no estágio curricular serão realizados através de relatórios mensais das atividades
+            \n desenvolvidas ao longo do estágio, elaborados e encaminhados ao Professor Orientador, e
+            \n levará em conta uma frequência mínima exigida de 75% (setenta e cinco por cento), as
+            \n atividades programadas e a execução do estágio.
+            \n Ao final do estágio supervisionado, o estudante apresentará um relatório final ao
+            \n professor orientador. A partir desse relatório, o professor orientador avaliará o estágio e
+            \n atribuirá uma nota de zero a 10 (dez).\n
+               \n  \U0001F4E9 Para saber mais envie um email com sua dúvida para estagio.uacsa@ufrpe.br"
+
+i_tipo_de_estagio:
+  responses:
+    - "Qual tipo de estágio: estágio do tecnológico ou estágio do bacharelado?"
+
+i_dispensa:
+  responses:
+    - " \U0001F6AB Requisitos para dispensar disciplina:
+        \n 1- os conteúdos das disciplinas devem ser equivalentes em 80%
+        \n 2- a carga horária deve ser igual ou superior
+        \n 3- A disciplina deve ser regularmente oferecida pela instituição onde foi cursada
+        \n 4- Para realizar a dispensa você deve solicitar ao coordenador do seu curso
+        \n\U0001F4E9 Para saber mais envie um email com sua dúvida para o coordenação do seu curso:\n\n
+        coordenacao.civil.uacsa@ufrpe.br\n
+        coordenacao.materiais.uacsa@ufrpe.br\n
+        coordenacao.eletrica.uacsa@ufrpe.br\n
+        coordenacao.eletronica.uacsa@ufrpe.br\n
+        coordenacao.mecanica.uacsa@ufrpe.br\n"
+
+i_desligamento:
+  responses:
+    - " \U0001F198 instruções para alunos acompanhados e desligáveis:
+           \n o discente será desligado se:
+           \n 1- Ultrapassar o prazo máximo de integralização curricular que é igual ao prazo normal mais 70% do prazo normal
+           \n 2- Extrapolar o número máximo de trancamentos de matrícula que é de 4 semestres.
+           \n 3- Estiver impossibilitado de integralizar o currículo nos períodos letivos restantes, antes de completado o prazo limite para conclusão do curso,
+           levando-se em consideração os prérequisitos das disciplinas (ou períodos necessários), limites semestrais de matrícula em disciplinas e compatibilidade de horário
+           \n 4- Matricular-se na mesma disciplina, sem aproveitamento, por quatro vezes (consecutivas ou não).\n
+
+           \n Para mais informações você deve procurar o COOA do seu curso, que é uma Comissão de Orientação e Acompanhamento Acadêmico
+           \n para os alunos que apresentem dificuldades em seus estudos. Eles acompanham os alunos reprovados por 3 vezes
+           \n mesma disciplina identificando o problema,orientando e motivando o aluno a solucionar suas dificuldades."
