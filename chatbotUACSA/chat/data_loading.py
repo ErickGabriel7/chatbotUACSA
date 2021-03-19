@@ -54,8 +54,8 @@ if __name__ == '__main__':
 
         intent = evaluate_intent(text)
         if intent is None:
-            print(
-                'puxa acho que entendi mais ainda não sei responder.\nAtualmente só posso ajudar com comprovantes de matrícula,declaração de vínculo,dispensas,estágio e desligamento. ')
+            print('puxa acho que entendi mais ainda não sei responder.\nAtualmente só posso ajudar com comprovantes '
+                  'de matrícula,declaração de vínculo,dispensas,estágio e desligamento. ')
         else:
             command_result = respond_intent(intent)
             print(command_result)
