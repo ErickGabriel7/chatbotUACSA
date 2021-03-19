@@ -19,7 +19,7 @@ def receive_message():
     # pegando a mensagem com os dados que o telegram enviou
     body = request.json
     app.logger.info(f"Chegou uma nova mensagem: {body}")
-    #### just for test
+
     resposta = process_message(body)
     send_text_message(resposta, body)
     app.logger.info(f"resposta: {resposta}")
@@ -45,7 +45,6 @@ def process_message(body):
     # verificando se a mensagem é um texto
     if 'text' in body['message']:
         texto_recebido = body['message']['text']
-        app.logger.info('texto que será processado: ' + texto_recebido)
         nome_usuario = body['message']['from']['first_name']
         # quando um novo usuário inicia uma conversa com o bot, a primeira mensagem é sempre '\start'
         if texto_recebido == '/start':
