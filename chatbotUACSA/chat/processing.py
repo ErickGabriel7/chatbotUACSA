@@ -10,4 +10,4 @@ def create_answer(input_text):
             'puxa acho que entendi mais ainda não sei responder.\nAtualmente só posso ajudar com comprovantes,dispensas,estágio e desligamento. ')
     else:
         response = respond_intent(ok)
-        return ('Resposta:', response)
+        return response
