@@ -1,15 +1,20 @@
-import yaml
+import os
 import random
+
+import yaml
+
 from chatbotUACSA.utils import clean_text
+
+script_dir = os.path.dirname(__file__)  # this is the absolute folder where this script is in
 
 
 def load_intents():
-    with open('chatbotUACSA/chatbotUACSA/chat/data/intents.yaml', encoding='utf-8') as file:
+    with open(os.path.join(script_dir, 'data/intents.yaml'), encoding='utf-8') as file:
         return yaml.load(file, yaml.SafeLoader)
 
 
 def load_responses():
-    with open('chatbotUACSA/chatbotUACSA/chat/data/responses.yaml', encoding='utf-8') as file:
+    with open(os.path.join(script_dir, 'data/responses.yaml'), encoding='utf-8') as file:
         return yaml.load(file, yaml.SafeLoader)
 
 
