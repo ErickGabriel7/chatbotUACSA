@@ -19,7 +19,7 @@ def receive_message():
     # pegando a mensagem com os dados que o telegram enviou
     body = request.json
     app.logger.info(f"Chegou uma nova mensagem: {body}")
-
+    #### just for test
     resposta = process_message(body)
     send_text_message(resposta, body)
     app.logger.info(f"resposta: {resposta}")
