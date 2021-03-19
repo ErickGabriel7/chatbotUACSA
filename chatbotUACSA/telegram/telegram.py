@@ -22,6 +22,7 @@ def receive_message():
 
     resposta = process_message(body)
     send_text_message(resposta, body)
+    app.logger.info(f"resposta: {resposta}")
 
     # falar para o telegram que tudo ocorreu bem
     return {'ok': True}
