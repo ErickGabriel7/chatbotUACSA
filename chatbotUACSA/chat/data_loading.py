@@ -41,10 +41,11 @@ def respond_intent(command):
     result = None
 
     try:
-        if responses[command] != None and responses[command]['responses'] != None:
-            result = random.choice(responses[command]['responses'])
+        if responses[command] is not None and responses[command]['responses'] is not None and \
+                responses[command]['responses']['text'] is not None:
+            result = random.choice(responses[command]['responses']['text'])
     except KeyError:
-        result = 'Hm, eu acho que entendi o que você quer, mas ainda não sei responder isso.'
+        result = 'Hmm, eu acho que entendi o que você quer, mas ainda não sei responder isso.'
 
     return result
 
@@ -60,7 +61,7 @@ if __name__ == '__main__':
         intent = evaluate_intent(text)
         if intent is None:
             print('puxa acho que entendi mais ainda não sei responder.\nAtualmente só posso ajudar com comprovantes '
-                  'de matrícula,declaração de vínculo,dispensas,estágio e desligamento. ')
+                  'de matrícula, declaração de vínculo, dispensas, estágio e desligamento. ')
         else:
             command_result = respond_intent(intent)
             print(command_result)
