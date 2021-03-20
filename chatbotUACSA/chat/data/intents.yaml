@@ -48,3 +48,12 @@ i_desligamento:
     - desligar
     - acompanhamento
     - desligamento
+
+i_saudacoes:
+  utterances:
+    -oi
+    -ola
+    -alo
+    -bom+dia
+    -boa+tarde
+    -boa+noite

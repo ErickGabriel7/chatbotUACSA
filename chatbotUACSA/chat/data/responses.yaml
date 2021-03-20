@@ -98,3 +98,11 @@ i_desligamento:
          \n Para mais informações você deve procurar o COOA do seu curso, que é uma Comissão de Orientação e Acompanhamento Acadêmico
          \n para os alunos que apresentem dificuldades em seus estudos. Eles acompanham os alunos reprovados por 3 vezes
          \n mesma disciplina identificando o problema,orientando e motivando o aluno a solucionar suas dificuldades."
+
+i_saudacoes:
+  responses:
+    text:
+      - "Olá! \U0001F601"
+      - "Oi! \U0001F601"
+      - "Olá, como posso ajudar?"
+      - "Oi, tudo bem? \U0001F601"
