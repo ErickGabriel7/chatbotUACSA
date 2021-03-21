@@ -1,7 +1,7 @@
 from chatbotUACSA.utils import clean_text
 from .data_loading import evaluate_intent, respond_intent
 
-
+#teste
 def create_answer(input_text):
     input_text = clean_text(input_text)
     ok = evaluate_intent(input_text)
