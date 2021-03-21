@@ -21,7 +21,11 @@ def receive_message():
     app.logger.info(f"Chegou uma nova mensagem: {body}")
 
     resposta = process_message(body)
-    send_text_message(resposta, body)
+    try:
+        if resposta['images'] is not None:
+            send_photo(resposta['images'], body, caption=resposta['text'])
+    except KeyError:
+        send_text_message(resposta['text'], body)
     app.logger.info(f"resposta: {resposta}")
 
     # falar para o telegram que tudo ocorreu bem

@@ -42,7 +42,12 @@ def respond_intent(command):
     try:
         if responses[command] is not None and responses[command]['responses'] is not None and \
                 responses[command]['responses']['text'] is not None:
-            result = random.choice(responses[command]['responses']['text'])
+            try:
+                if responses[command]['responses']['images'] is not None:
+                    result = {'text': random.choice(responses[command]['responses']['text']),
+                              'images': random.choice(responses[command]['responses']['images'])}
+            except KeyError:
+                result = {'text': random.choice(responses[command]['responses']['text'])}
     except KeyError:
         result = 'Hmm, eu acho que entendi o que você quer, mas ainda não sei responder isso.'
 

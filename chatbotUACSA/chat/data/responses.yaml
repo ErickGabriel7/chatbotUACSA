@@ -27,6 +27,8 @@ i_declaracao_de_vinculo:
         coordenacao.eletrica.uacsa@ufrpe.br\n
         coordenacao.eletronica.uacsa@ufrpe.br\n
         coordenacao.mecanica.uacsa@ufrpe.br\n"
+    images:
+      - "chatbotUACSA/chat/img/i_declaracao_de_vinculo1.png"
 
 i_estagio_tecnologo:
   responses:
