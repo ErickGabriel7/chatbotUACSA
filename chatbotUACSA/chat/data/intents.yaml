@@ -51,9 +51,9 @@ i_desligamento:
 
 i_saudacoes:
   utterances:
-    -oi
-    -ola
-    -alo
-    -bom+dia
-    -boa+tarde
-    -boa+noite
+    - oi
+    - ola
+    - alo
+    - bom+dia
+    - boa+tarde
+    - boa+noite

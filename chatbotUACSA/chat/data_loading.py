@@ -33,7 +33,6 @@ def evaluate_intent(text):
                     return intent
             elif utterance in text:
                 return intent
-
     return None
 
 
