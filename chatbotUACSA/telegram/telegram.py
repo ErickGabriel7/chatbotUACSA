@@ -1,6 +1,8 @@
 from flask import Flask, request
 from requests import get
+from chatbotUACSA.chat.data_loading import script_dir
 import git
+import os
 
 from chatbotUACSA.chat.processing import create_answer
 
@@ -76,14 +78,14 @@ def send_photo(photo_adress, body, caption=None):
     else:
         # a imagem precisa estar no servidor, não funciona para url
         if caption is None:
-            with open(photo_adress, 'rb') as photo:
+            with open(os.path.join(script_dir, photo_adress), 'rb') as photo:
                 endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
                 params = {
                     "chat_id": body['message']['chat']['id']
                 }
                 get(endpoint, params, files={'photo': photo})
         else:
-            with open(photo_adress, 'rb') as photo:
+            with open(os.path.join(script_dir, photo_adress), 'rb') as photo:
                 endpoint = f"https://api.telegram.org/bot{BOT_TOKEN}/sendPhoto"
                 params = {
                     "chat_id": body['message']['chat']['id'],
