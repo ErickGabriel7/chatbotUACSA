@@ -25,7 +25,7 @@ def receive_message():
     resposta = process_message(body)
     try:
         if resposta['images'] is not None:
-            send_photo(resposta['images'], body, caption=resposta['text'])
+            send_photo(resposta['images'], body)
     except KeyError:
         send_text_message(resposta['text'], body)
     app.logger.info(f"resposta: {resposta}")
