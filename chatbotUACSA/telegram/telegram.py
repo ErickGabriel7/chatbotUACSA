@@ -26,7 +26,7 @@ def receive_message():
     try:
         if resposta['images'] is not None:
             send_photo(resposta['images'], body)
-    except KeyError:
+    except KeyError or TypeError:
         send_text_message(resposta['text'], body)
     app.logger.info(f"resposta: {resposta}")
 
