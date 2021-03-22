@@ -6,7 +6,7 @@ i_atestado_de_matricula:
           \n 4- Clicar em emitir atestado de mátricula
           \n 2- Realizar o login
           \n 3- Clicar na aba ensino
-          \n  \U0001F4E9 Para saber mais envie um email com sua dúvida para a coordenação do seu curso:\n\n
+          \n  \U0001F4E9 Para saber mais, envie um email com sua dúvida para a coordenação do seu curso:\n\n
           coordenacao.civil.uacsa@ufrpe.br\n
           coordenacao.materiais.uacsa@ufrpe.br\n
           coordenacao.eletrica.uacsa@ufrpe.br\n
@@ -21,7 +21,7 @@ i_declaracao_de_vinculo:
         \n 2- Realizar o login
         \n 3- Clicar na aba ensino
         \n 4- Clicar em emitir declaração de vínculo
-        \n  \U0001F4E9 Para saber mais envie um email com sua dúvida para a coordenação do seu curso:\n\n
+        \n  \U0001F4E9 Para saber mais, envie um email com sua dúvida para a coordenação do seu curso:\n\n
         coordenacao.civil.uacsa@ufrpe.br\n
         coordenacao.materiais.uacsa@ufrpe.br\n
         coordenacao.eletrica.uacsa@ufrpe.br\n
@@ -50,7 +50,7 @@ i_estagio_tecnologo:
 i_estagio_bacharel:
   responses:
     text:
-      " Se você atende os requesitos informados no planejamento pedagógico do seu curso então:
+      - " Se você atende os requesitos informados no planejamento pedagógico do seu curso então:
         \n O Estágio Supervisionado Obrigatório - Bacharelado terá uma carga horária de 180 (cento e oitenta) horas
         \n e poderá ser realizado na própria instituição de ensino, mediante laboratórios que congreguem
         \n as diversas ordens práticas correspondentes aos diferentes pensamentos das Ciências Exatas

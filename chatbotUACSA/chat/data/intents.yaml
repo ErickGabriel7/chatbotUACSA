@@ -20,6 +20,7 @@ i_estagio_tecnologo:
     - eso+tecnologo
     - eso+tecnico
     - tecnico
+    - tecnologico
 
 
 i_estagio_bacharel:
@@ -28,6 +29,7 @@ i_estagio_bacharel:
     - estagio+bacharelado
     - eso+bacharel
     - bacharel
+    - bacharelado
 
 i_tipo_de_estagio:
   utterances:
