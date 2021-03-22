@@ -25,10 +25,13 @@ def receive_message():
     resposta = process_message(body)
     try:
         if resposta['images'] is not None:
-            send_photo(resposta['images'], body)
+            resposta = resposta['images']
+            app.logger.info(f"Resposta (send_photo): {resposta}")
+            send_photo(resposta, body)
     except KeyError or TypeError:
-        send_text_message(resposta['text'], body)
-    app.logger.info(f"resposta: {resposta}")
+        resposta = resposta['text']
+        app.logger.info(f"Resposta (send_text_message): {resposta}")
+        send_text_message(resposta, body)
 
     # falar para o telegram que tudo ocorreu bem
     return {'ok': True}
