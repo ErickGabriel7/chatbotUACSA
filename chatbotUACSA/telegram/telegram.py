@@ -25,9 +25,10 @@ def receive_message():
     resposta = process_message(body)
     try:
         if resposta['images'] is not None:
-            resposta = resposta['images']
+            resposta_imagem = resposta['images']
+            resposta_texto = resposta['text']
             app.logger.info(f"Resposta (send_photo): {resposta}")
-            send_photo(resposta, body)
+            send_photo(resposta_imagem, body, caption=resposta_texto)
     except KeyError or TypeError:
         resposta = resposta['text']
         app.logger.info(f"Resposta (send_text_message): {resposta}")
