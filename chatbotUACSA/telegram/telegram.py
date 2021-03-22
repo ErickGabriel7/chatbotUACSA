@@ -58,10 +58,12 @@ def process_message(body):
         nome_usuario = body['message']['from']['first_name']
         # quando um novo usuário inicia uma conversa com o bot, a primeira mensagem é sempre '\start'
         if texto_recebido == '/start':
-            return f"Olá, {nome_usuario}!\nEu sou o chatbot não oficial de dúvidas da UACSA \U0001F601 \nEm que posso ajudar?"
+            return {'text': f'Olá, {nome_usuario}!\nEu sou o chatbot não '
+                            f'oficial de dúvidas da UACSA \U0001F601 \nEm que posso ajudar?'}
         return create_answer(texto_recebido)
     else:
-        return f"Desculpe, só processo mensagens de texto por enquanto \U00002639 "
+        return {'text': f'Desculpe, só processo mensagens de texto por '
+                        f'enquanto \U00002639'}
 
 
 def send_text_message(text, body):

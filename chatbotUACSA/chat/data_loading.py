@@ -25,7 +25,7 @@ responses = load_responses()
 def evaluate_intent(text):
     for intent, content in intents.items():
         for utterance in content['utterances']:
-            # If the utterance has a + symbols it means that it has multiple AND terms.
+            # If the utterance has a + symbol it means that it has multiple AND terms.
             # Otherwise, a simple check will suffice.
             if '+' in utterance:
                 terms = utterance.split('+')
