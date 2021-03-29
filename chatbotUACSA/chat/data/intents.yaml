@@ -59,3 +59,10 @@ i_saudacoes:
     - bom+dia
     - boa+tarde
     - boa+noite
+
+i_calendario:
+  utterances:
+    - calendario
+    - calendario+academico
+    - data
+    - feriado

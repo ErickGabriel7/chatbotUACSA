@@ -108,3 +108,10 @@ i_saudacoes:
       - "Oi! \U0001F601"
       - "Olá, como posso ajudar?"
       - "Oi, tudo bem? \U0001F601"
+
+i_calendario:
+  responses:
+    text:
+      - "Esse é o calendário acadêmico da UFRPE:"
+    docs:
+      - "data/doc/i_calendario1.pdf"

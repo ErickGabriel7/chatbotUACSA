@@ -37,19 +37,61 @@ def evaluate_intent(text):
 
 
 def respond_intent(command):
+    global there_is_img
+    global there_is_text
+    global there_is_doc
     result = None
-
     try:
-        if responses[command] is not None and responses[command]['responses'] is not None and \
-                responses[command]['responses']['text'] is not None:
+        if responses[command] is not None and responses[command]['responses'] is not None:
+            try:
+                if responses[command]['responses']['text'] is not None:
+                    there_is_text = True
+            except KeyError:
+                there_is_text = False
             try:
                 if responses[command]['responses']['images'] is not None:
-                    result = {'text': random.choice(responses[command]['responses']['text']),
-                              'images': random.choice(responses[command]['responses']['images'])}
+                    there_is_img = True
             except KeyError:
-                result = {'text': random.choice(responses[command]['responses']['text'])}
+                there_is_img = False
+            try:
+                if responses[command]['responses']['docs'] is not None:
+                    there_is_doc = True
+            except KeyError:
+                there_is_doc = False
+            if there_is_text:
+                if there_is_img:
+                    if there_is_doc:
+                        result = {'text': random.choice(responses[command]['responses']['text']),
+                                  'images': random.choice(responses[command]['responses']['images']),
+                                  'docs': random.choice(responses[command]['responses']['docs'])
+                                  }
+                    else:
+                        result = {'text': random.choice(responses[command]['responses']['text']),
+                                  'images': random.choice(responses[command]['responses']['images'])
+                                  }
+                else:
+                    if there_is_doc:
+                        result = {'text': random.choice(responses[command]['responses']['text']),
+                                  'docs': random.choice(responses[command]['responses']['docs'])
+                                  }
+                    else:
+                        result = {'text': random.choice(responses[command]['responses']['text'])}
+            elif there_is_doc:
+                result = {'docs': random.choice(responses[command]['responses']['docs'])}
+            else:
+                if there_is_img:
+                    if there_is_doc:
+                        result = {'docs': random.choice(responses[command]['responses']['docs']),
+                                  'images': random.choice(responses[command]['responses']['images'])
+                                  }
+                    else:
+                        result = {'images': random.choice(responses[command]['responses']['images'])
+                                  }
+
     except KeyError:
-        result = 'Hmm, eu acho que entendi o que você quer, mas ainda não sei responder isso.'
+        result = 'Hmm, eu acho que entendi o que você quer, mas ainda não sei responder isso.' \
+                 '\nAtualmente só posso ajudar com comprovantes ' \
+                 'de matrícula, declaração de vínculo, dispensas, estágio e desligamento.'
 
     return result
 
