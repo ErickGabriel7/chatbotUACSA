@@ -161,7 +161,7 @@ def send_photo(photo_adress, body, caption=None):
 
 def send_document(document_adress, body, caption=None):
     if app.config['ENV'] == 'development':
-        print('\n [ENVIANDO IMAGEM]:', document_adress, '\n')
+        print('\n [ENVIANDO DOCUMENTO]:', document_adress, '\n')
     else:
         if caption is None:
             with open(os.path.join(script_dir, document_adress), 'rb') as document:
