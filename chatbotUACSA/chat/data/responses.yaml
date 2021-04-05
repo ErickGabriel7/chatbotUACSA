@@ -1,117 +1,97 @@
 i_atestado_de_matricula:
   responses:
     text:
-      - "\U0001F4C3 Para emitir o atestado de matrícula, você deve:
-          \n 1- Entrar no sigaa https://sigs.ufrpe.br/sigaa/verTelaLogin.
-          \n 4- Clicar em emitir atestado de mátricula
-          \n 2- Realizar o login
-          \n 3- Clicar na aba ensino
-          \n  \U0001F4E9 Para saber mais, envie um email com sua dúvida para a coordenação do seu curso:\n\n
-          coordenacao.civil.uacsa@ufrpe.br\n
-          coordenacao.materiais.uacsa@ufrpe.br\n
-          coordenacao.eletrica.uacsa@ufrpe.br\n
-          coordenacao.eletronica.uacsa@ufrpe.br\n
-          coordenacao.mecanica.uacsa@ufrpe.br\n"
-
+      - |
+          \U0001F4C3 Você pode pegar o seu **Atestado de Matrícula** no SIGAA, seguindo esses passos:
+          1- Entrar no SIGAA: https://sigs.ufrpe.br
+          2- Realizar o login
+          3- Dentro do menu "Ensino", clicar em "Emitir Atestado de Matrícula"
 i_declaracao_de_vinculo:
   responses:
     text:
-      - "\U0001F4C3 Para emitir uma declaração de vínculo, você deve:
-        \n 1- Entrar no sigaa https://sigs.ufrpe.br/sigaa/verTelaLogin.
-        \n 2- Realizar o login
-        \n 3- Clicar na aba ensino
-        \n 4- Clicar em emitir declaração de vínculo
-        \n  \U0001F4E9 Para saber mais, envie um email com sua dúvida para a coordenação do seu curso:\n\n
-        coordenacao.civil.uacsa@ufrpe.br\n
-        coordenacao.materiais.uacsa@ufrpe.br\n
-        coordenacao.eletrica.uacsa@ufrpe.br\n
-        coordenacao.eletronica.uacsa@ufrpe.br\n
-        coordenacao.mecanica.uacsa@ufrpe.br\n"
+      - |
+          \U0001F4C3 Para pegar a sua **Declaração de Vínculo**, você deve:
+          1- Entrar no SIGAA: https://sigs.ufrpe.br
+          2- Realizar o login
+          3- Dentro do menu "Ensino", clicar em "Emitir Declaração de Vínculo"
     images:
       - "data/img/i_declaracao_de_vinculo1.png"
-
 i_estagio_tecnologo:
   responses:
     text:
-      - " Se você atende os requesitos informados no planejamento pedagógico do seu curso então:
-        \n O Estágio Supervisionado Obrigatório - Tecnológico terá uma carga horária de 165
-        \n (cento e sessenta e cinco) horas,  e deverá ser realizado em industrias ou empresas que atuem na área
-        \n de formação do tecnólogo.Quanto à avaliação da atividade de estágio, tanto para o curso de bacharelado, quanto
-        \n para o curso tecnológico, o acompanhamento dos estagiários e a verificação do rendimento do
-        \n aluno no estágio curricular serão realizados através de relatórios mensais das atividades
-        \n desenvolvidas ao longo do estágio, elaborados e encaminhados ao Professor Orientador, e
-        \n levará em conta uma frequência mínima exigida de 75% (setenta e cinco por cento), as
-        \n atividades programadas e a execução do estágio.
-        \n Ao final do estágio supervisionado, o estudante apresentará um relatório final ao
-        \n professor orientador. A partir desse relatório, o professor orientador avaliará o estágio e
-        \n atribuirá uma nota de zero a 10 (dez).\n
-        \n  \U0001F4E9 Para saber mais envie um email com sua dúvida para estagio.uacsa@ufrpe.br"
+      - |
+          O Estágio Supervisionado Obrigatório (ESO) deve ser realizado em organizações que atuem na área do curso. A(o) aluna(o) precisa também atender pré-requisitos de carga horária concluída e/ou de disciplinas, que são diferentes para cada curso. Caso atenda esses requisitos, a(o) aluna(o) poderá oficializar o estágio enviando a documentação para estagio.uacsa@ufrpe.br:
+          1- Termo de compromisso de estágio obrigatório ou termo aditivo;
+          2- Plano individual de estágio.
 
+          Caso o estágio seja aprovado, a(o) aluna(o) será matriculada na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
+
+          \U0001F4E9 Para mais informações sobre estágio, envie um email com sua dúvida para estagio.uacsa@ufrpe.br
 i_estagio_bacharel:
   responses:
     text:
-      - " Se você atende os requesitos informados no planejamento pedagógico do seu curso então:
-        \n O Estágio Supervisionado Obrigatório - Bacharelado terá uma carga horária de 180 (cento e oitenta) horas
-        \n e poderá ser realizado na própria instituição de ensino, mediante laboratórios que congreguem
-        \n as diversas ordens práticas correspondentes aos diferentes pensamentos das Ciências Exatas
-        \n ou junto a pessoas jurídicas de direito público ou privado, sob responsabilidade da
-        \n Coordenação do Curso, e que contribua, de forma eficaz, para sua absorção pelo mercado de
-        \n trabalho. Quanto à avaliação da atividade de estágio, tanto para o curso de bacharelado, quanto
-        \n para o curso tecnológico, o acompanhamento dos estagiários e a verificação do rendimento do
-        \n aluno no estágio curricular serão realizados através de relatórios mensais das atividades
-        \n desenvolvidas ao longo do estágio, elaborados e encaminhados ao Professor Orientador, e
-        \n levará em conta uma frequência mínima exigida de 75% (setenta e cinco por cento), as
-        \n atividades programadas e a execução do estágio.
-        \n Ao final do estágio supervisionado, o estudante apresentará um relatório final ao
-        \n professor orientador. A partir desse relatório, o professor orientador avaliará o estágio e
-        \n atribuirá uma nota de zero a 10 (dez).\n
-        \n  \U0001F4E9 Para saber mais envie um email com sua dúvida para estagio.uacsa@ufrpe.br"
+      - |
+          O Estágio Supervisionado Obrigatório (ESO) deve ser realizado em organizações que atuem na área do curso. A(o) aluna(o) precisa também atender pré-requisitos de carga horária concluída e/ou de disciplinas, que são diferentes para cada curso. Caso atenda esses requisitos, a(o) aluna(o) poderá oficializar o estágio enviando a documentação para estagio.uacsa@ufrpe.br:
+          1- Termo de compromisso de estágio obrigatório ou termo aditivo;
+          2- Plano individual de estágio.
 
+          Caso o estágio seja aprovado, a(o) aluna(o) será matriculada na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
+
+          \U0001F4E9 Para mais informações sobre estágio, envie um email com sua dúvida para estagio.uacsa@ufrpe.br
 i_tipo_de_estagio:
   responses:
     text:
-      - "Qual tipo de estágio: estágio do tecnológico ou estágio do bacharelado?"
-
+      - |
+          Todo estudante precisa realizar o Estágio Supervisionado Obrigatório (ESO). Você quer informações sobre qual tipo de estágio: "estágio tecnológico" ou "estágio bacharelado"?
 i_dispensa:
   responses:
     text:
-      - " \U0001F6AB Requisitos para dispensar disciplina:
-          \n 1- Os conteúdos das disciplinas devem ser equivalentes em 80%
-          \n 2- A carga horária deve ser igual ou superior
-          \n 3- A disciplina deve ser regularmente oferecida pela instituição onde foi cursada
-          \n 4- Para realizar a dispensa você deve solicitar ao coordenador do seu curso
-          \n\U0001F4E9 Para saber mais envie um email com sua dúvida para a coordenação do seu curso:\n\n
-          coordenacao.civil.uacsa@ufrpe.br\n
-          coordenacao.materiais.uacsa@ufrpe.br\n
-          coordenacao.eletrica.uacsa@ufrpe.br\n
-          coordenacao.eletronica.uacsa@ufrpe.br\n
-          coordenacao.mecanica.uacsa@ufrpe.br\n"
+      - |
+          Se você já cursou alguma faculdade, pode tentar a dispensa das disciplinas em que já foi aprovado(a), para não precisar cursá-las novamente.
+          Quando se pede a dispensa de uma disciplina, ela é analisada por professores da UACSA, que vão avaliar se a dispensa pode ser feita ou não levando em conta o seguinte:
+          1- A carga horária da disciplina cursada é igual ou maior do que a carga horária da disciplina a ser dispensada?
+          2- O conteúdo das disciplinas é realmente equivalente (pelo menos 80% iguais)?
 
+          **COMO PEDIR A DISPENSA?**
+          Para pedir a dispensa de uma ou mais disciplinas você deve enviar para a coordenação esse requerimento \U0001F446, preenchido, junto com a documentação da faculdade que você cursou: histórico com notas e o conteúdo programático de cada disciplina. O processo costuma demorar entre 1 e 2 meses, por isso é importante fazer a solicitação com antecedência.
+
+          \U0001F4E9 Para mais informações entre em contato com a coordenação do seu curso:
+          coordenacao.civil.uacsa@ufrpe.br
+          coordenacao.materiais.uacsa@ufrpe.br
+          coordenacao.eletrica.uacsa@ufrpe.br
+          coordenacao.eletronica.uacsa@ufrpe.br
+          coordenacao.mecanica.uacsa@ufrpe.br
+    docs:
+      - "data/doc/dispensa_de_disciplinas.pdf"
 i_desligamento:
   responses:
     text:
-      - " \U0001F198 Instruções para alunos acompanhados e desligáveis:
-         \n O discente será desligado se:
-         \n 1- Ultrapassar o prazo máximo de integralização curricular que é igual ao prazo normal mais 70% do prazo normal
-         \n 2- Extrapolar o número máximo de trancamentos de matrícula que é de 4 semestres.
-         \n 3- Estiver impossibilitado de integralizar o currículo nos períodos letivos restantes, antes de completado o prazo limite para conclusão do curso,
-         levando-se em consideração os prérequisitos das disciplinas (ou períodos necessários), limites semestrais de matrícula em disciplinas e compatibilidade de horário
-         \n 4- Matricular-se na mesma disciplina, sem aproveitamento, por quatro vezes (consecutivas ou não).\n
-         \n Para mais informações você deve procurar o COOA do seu curso, que é uma Comissão de Orientação e Acompanhamento Acadêmico
-         \n para os alunos que apresentem dificuldades em seus estudos. Eles acompanham os alunos reprovados por 3 vezes
-         \n mesma disciplina identificando o problema,orientando e motivando o aluno a solucionar suas dificuldades."
+      - |
+         \U0001F198 Instruções para alunos acompanhados e desligáveis:
+         O(a) estudante será desligado(a) do seu curso se:
+         1- Reprovar quatro vezes uma mesma disciplina (consecutivas ou não);
+         2- Trancar a matrícula por mais do que 4 semestres;
+         3- Ultrapassar o prazo máximo de integralização curricular, que é igual a 17 semestres;
+         4- For observado que não será mais possível completar o curso dentro do prazo máximo, levando-se em consideração os pré-requisitos das disciplinas, os limites semestrais de matrícula e a compatibilidade dos horários
 
+         Caso o(a) estudante seja desligado(a) do curso, ainda é possível voltar através do SiSU.
+
+         Antes do desligamento, a Comissão de Orientação e Acompanhamento Acadêmico (COAA) de cada curso entra em contato com os estudantes, para tentar orienta-los e evitar o desligamento. Por isso, fique de olho nos dados de contato (e-mail e telefone) cadastrados no seu SIGAA.
+i_calendario:
+  responses:
+    text:
+      - Esse é o calendário acadêmico da UFRPE:
+    docs:
+      - "data/doc/i_calendario1.pdf"
 i_saudacoes:
   responses:
     text:
       - "Olá! \U0001F601"
       - "Oi! \U0001F601"
       - "Olá, como posso ajudar?"
-      - "Oi, tudo bem? \U0001F601"
-
-i_calendario:
+      - "Oi, como posso te ajudar? \U0001F601"
+i_despedidas:
   responses:
     text:
-      - "Esse é o calendário acadêmico da UFRPE:"
-    docs:
-      - "data/doc/i_calendario1.pdf"
+      - "Tchau, espero que tenha te ajudado! \U0001F601"
+      - "Tchau e até a próxima! \U0001F601"

@@ -6,9 +6,10 @@ def create_answer(input_text):
     input_text = clean_text(input_text)
     ok = evaluate_intent(input_text)
     if ok is None:
-        return {'text': 'Puxa acho que entendi mais ainda não sei '
-                        'responder. Atualmente só posso ajudar com '
-                        'comprovantes, dispensas, estágio e desligamento.'}
+        return {'text': 'Puxa, ainda não sei te informar sobre isso. '
+                        'Atualmente só posso ajudar com informações sobre '
+                        'comprovantes, estágio, desligamento, calendário e '
+                        'dispensa de disciplinas.'}
     else:
         response = respond_intent(ok)
         return response
