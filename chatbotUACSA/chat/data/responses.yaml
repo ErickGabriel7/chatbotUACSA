@@ -80,7 +80,7 @@ i_desligamento:
 i_calendario:
   responses:
     text:
-      - Esse é o calendário acadêmico da UFRPE:
+      - "Esse é o calendário acadêmico da UFRPE \U0001F446"
     docs:
       - "data/doc/i_calendario1.pdf"
 i_saudacoes:
