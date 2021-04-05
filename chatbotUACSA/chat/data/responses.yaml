@@ -2,7 +2,7 @@ i_atestado_de_matricula:
   responses:
     text:
       - |
-          \U0001F4C3 Você pode pegar o seu **Atestado de Matrícula** no SIGAA, seguindo esses passos:
+          📃 Você pode pegar o seu **Atestado de Matrícula** no SIGAA, seguindo esses passos:
           1- Entrar no SIGAA: https://sigs.ufrpe.br
           2- Realizar o login
           3- Dentro do menu "Ensino", clicar em "Emitir Atestado de Matrícula"
@@ -10,7 +10,7 @@ i_declaracao_de_vinculo:
   responses:
     text:
       - |
-          \U0001F4C3 Para pegar a sua **Declaração de Vínculo**, você deve:
+          📃 Para pegar a sua **Declaração de Vínculo**, você deve:
           1- Entrar no SIGAA: https://sigs.ufrpe.br
           2- Realizar o login
           3- Dentro do menu "Ensino", clicar em "Emitir Declaração de Vínculo"
@@ -53,7 +53,7 @@ i_dispensa:
           2- O conteúdo das disciplinas é realmente equivalente (pelo menos 80% iguais)?
 
           **COMO PEDIR A DISPENSA?**
-          Para pedir a dispensa de uma ou mais disciplinas você deve enviar para a coordenação esse requerimento \U0001F446, preenchido, junto com a documentação da faculdade que você cursou: histórico com notas e o conteúdo programático de cada disciplina. O processo costuma demorar entre 1 e 2 meses, por isso é importante fazer a solicitação com antecedência.
+          Para pedir a dispensa de uma ou mais disciplinas você deve enviar para a coordenação esse requerimento 👆, preenchido, junto com a documentação da faculdade que você cursou: histórico com notas e o conteúdo programático de cada disciplina. O processo costuma demorar entre 1 e 2 meses, por isso é importante fazer a solicitação com antecedência.
 
           📩 Para mais informações entre em contato com a coordenação do seu curso:
           coordenacao.civil.uacsa@ufrpe.br
@@ -67,7 +67,7 @@ i_desligamento:
   responses:
     text:
       - |
-         \U0001F198 Instruções para alunos acompanhados e desligáveis:
+         🆘 Instruções para alunos acompanhados e desligáveis:
          O(a) estudante será desligado(a) do seu curso se:
          1- Reprovar quatro vezes uma mesma disciplina (consecutivas ou não);
          2- Trancar a matrícula por mais do que 4 semestres;
@@ -80,7 +80,8 @@ i_desligamento:
 i_calendario:
   responses:
     text:
-      - "Esse é o calendário acadêmico da UFRPE \U0001F446"
+      - |
+          Esse é o calendário acadêmico da UFRPE 👆
     docs:
       - "data/doc/i_calendario1.pdf"
 i_saudacoes:
