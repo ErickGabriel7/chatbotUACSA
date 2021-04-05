@@ -26,7 +26,7 @@ i_estagio_tecnologo:
 
           Caso o estágio seja aprovado, a(o) aluna(o) será matriculada na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
 
-          \U0001F4E9 Para mais informações sobre estágio, envie um email com sua dúvida para estagio.uacsa@ufrpe.br
+          📩 Para mais informações sobre estágio, envie um email com sua dúvida para estagio.uacsa@ufrpe.br
 i_estagio_bacharel:
   responses:
     text:
@@ -37,7 +37,7 @@ i_estagio_bacharel:
 
           Caso o estágio seja aprovado, a(o) aluna(o) será matriculada na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
 
-          \U0001F4E9 Para mais informações sobre estágio, envie um email com sua dúvida para estagio.uacsa@ufrpe.br
+          📩 Para mais informações sobre estágio, envie um email com sua dúvida para estagio.uacsa@ufrpe.br
 i_tipo_de_estagio:
   responses:
     text:
@@ -55,7 +55,7 @@ i_dispensa:
           **COMO PEDIR A DISPENSA?**
           Para pedir a dispensa de uma ou mais disciplinas você deve enviar para a coordenação esse requerimento \U0001F446, preenchido, junto com a documentação da faculdade que você cursou: histórico com notas e o conteúdo programático de cada disciplina. O processo costuma demorar entre 1 e 2 meses, por isso é importante fazer a solicitação com antecedência.
 
-          \U0001F4E9 Para mais informações entre em contato com a coordenação do seu curso:
+          📩 Para mais informações entre em contato com a coordenação do seu curso:
           coordenacao.civil.uacsa@ufrpe.br
           coordenacao.materiais.uacsa@ufrpe.br
           coordenacao.eletrica.uacsa@ufrpe.br

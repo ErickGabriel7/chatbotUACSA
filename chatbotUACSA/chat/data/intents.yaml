@@ -40,7 +40,6 @@ i_tipo_de_estagio:
 i_dispensa:
   utterances:
     - dispensa
-    - dispensa
     - isençao+disciplina
     - aproveitamento+disciplina
     - aproveitar+disciplina
