@@ -1,16 +1,16 @@
-i_atestado_de_matricula:
-  utterances:
-    - declaracao+matricula
-    - comprovante+matricula
-    - matricula
-    - comprovante
-
 i_declaracao_de_vinculo:
   utterances:
     - declaracao+vinculo
     - comprovante+vinculo
     - vinculo
     - vinculad
+
+i_atestado_de_matricula:
+  utterances:
+    - declaracao+matricula
+    - comprovante+matricula
+    - matricula
+    - comprovante
 
 i_estagio_tecnologo:
   utterances:
@@ -22,7 +22,6 @@ i_estagio_tecnologo:
     - eso+tecnico
     - tecnico
     - tecnologico
-
 
 i_estagio_bacharel:
   utterances:
@@ -40,7 +39,7 @@ i_tipo_de_estagio:
 i_dispensa:
   utterances:
     - dispensa
-    - isençao+disciplina
+    - isencao+disciplina
     - aproveitamento+disciplina
     - aproveitar+disciplina
 
@@ -56,21 +55,6 @@ i_desligamento:
     - jubilar
     - expuls
 
-i_saudacoes:
-  utterances:
-    - oi
-    - ola
-    - alo
-    - bom+dia
-    - boa+tarde
-    - boa+noite
-
-i_despedidas:
-  utterances:
-    - tchau
-    - xau
-    - até a próxima
-
 i_calendario:
   utterances:
     - calendario
@@ -80,3 +64,18 @@ i_calendario:
     - prazo
     - quando começa
     - quando acaba
+
+i_saudacoes:
+  utterances:
+    - oi
+    - ola
+    - alo
+    - bom dia
+    - boa tarde
+    - boa noite
+
+i_despedidas:
+  utterances:
+    - tchau
+    - xau
+    - até a próxima
