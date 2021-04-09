@@ -138,6 +138,8 @@ def send_text_message(text, body):
 
 
 def send_photo(photo_adress, body, caption=None):
+    photo_adress = 'data/img/' + photo_adress
+
     if app.config['ENV'] == 'development':
         print('\n [ENVIANDO IMAGEM]:', photo_adress, '\n')
     else:
@@ -160,6 +162,8 @@ def send_photo(photo_adress, body, caption=None):
 
 
 def send_document(document_adress, body, caption=None):
+    document_adress = 'data/doc/' + document_adress
+
     if app.config['ENV'] == 'development':
         print('\n [ENVIANDO DOCUMENTO]:', document_adress, '\n')
     else:

@@ -15,7 +15,7 @@ i_declaracao_de_vinculo:
           2- Realizar o login
           3- Dentro do menu "Ensino", clicar em "Emitir Declaração de Vínculo"
     images:
-      - "data/img/i_declaracao_de_vinculo1.png"
+      - "i_declaracao_de_vinculo1.png"
 i_estagio_tecnologo:
   responses:
     text:
@@ -62,7 +62,7 @@ i_dispensa:
           coordenacao.eletronica.uacsa@ufrpe.br
           coordenacao.mecanica.uacsa@ufrpe.br
     docs:
-      - "data/doc/dispensa_de_disciplinas.pdf"
+      - "dispensa_de_disciplinas.pdf"
 i_desligamento:
   responses:
     text:
@@ -83,7 +83,7 @@ i_calendario:
       - |
           Esse é o calendário acadêmico da UFRPE 👆
     docs:
-      - "data/doc/i_calendario1.pdf"
+      - "i_calendario1.pdf"
 i_saudacoes:
   responses:
     text:
