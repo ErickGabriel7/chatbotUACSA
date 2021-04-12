@@ -62,7 +62,7 @@ i_dispensa:
           coordenacao.eletronica.uacsa@ufrpe.br
           coordenacao.mecanica.uacsa@ufrpe.br
     docs:
-      - "dispensa_de_disciplinas.pdf"
+      - "dispensa_de_disciplinas2.pdf"
 i_desligamento:
   responses:
     text:
