@@ -68,20 +68,20 @@ def send_answer(resposta, body):
                 resposta_imagem = resposta['images']
                 resposta_texto = resposta['text']
                 resposta_documento = resposta['docs']
-                app.logger.info(f"Resposta (send_photo e send_document): {resposta}")
+                app.logger.info(f"Resposta (send_photo e send_document, caption=True): {resposta}")
                 send_photo(resposta_imagem, body, caption=resposta_texto)
                 send_document(resposta_documento, body)
 
             else:
                 resposta_imagem = resposta['images']
                 resposta_texto = resposta['text']
-                app.logger.info(f"Resposta (send_photo): {resposta}")
+                app.logger.info(f"Resposta (send_photo, caption=True): {resposta}")
                 send_photo(resposta_imagem, body, caption=resposta_texto)
         else:
             if there_is_doc:
                 resposta_documento = resposta['docs']
                 resposta_texto = resposta['text']
-                app.logger.info(f"Resposta (send_document): {resposta}")
+                app.logger.info(f"Resposta (send_document, caption=True): {resposta}")
                 send_document(resposta_documento, body, caption=resposta_texto)
             else:
                 resposta = resposta['text']
