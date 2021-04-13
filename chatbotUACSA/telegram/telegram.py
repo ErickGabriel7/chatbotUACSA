@@ -68,21 +68,37 @@ def send_answer(resposta, body):
                 resposta_imagem = resposta['images']
                 resposta_texto = resposta['text']
                 resposta_documento = resposta['docs']
-                app.logger.info(f"Resposta (send_photo e send_document, caption=True): {resposta}")
-                send_photo(resposta_imagem, body, caption=resposta_texto)
-                send_document(resposta_documento, body)
+                if len(resposta_texto) > 1024:
+                    app.logger.info(f"Resposta (send_photo, send_document e send_text_message): {resposta}")
+                    send_text_message(resposta_texto, body)
+                    send_photo(resposta_imagem, body)
+                    send_document(resposta_documento, body)
+                else:
+                    app.logger.info(f"Resposta (send_photo e send_document, caption=True): {resposta}")
+                    send_photo(resposta_imagem, body, caption=resposta_texto)
+                    send_document(resposta_documento, body)
 
             else:
                 resposta_imagem = resposta['images']
                 resposta_texto = resposta['text']
-                app.logger.info(f"Resposta (send_photo, caption=True): {resposta}")
-                send_photo(resposta_imagem, body, caption=resposta_texto)
+                if len(resposta_texto) > 1024:
+                    app.logger.info(f"Resposta (send_photo e send_text_message): {resposta}")
+                    send_text_message(resposta_texto, body)
+                    send_photo(resposta_imagem, body)
+                else:
+                    app.logger.info(f"Resposta (send_photo, caption=True): {resposta}")
+                    send_photo(resposta_imagem, body, caption=resposta_texto)
         else:
             if there_is_doc:
                 resposta_documento = resposta['docs']
                 resposta_texto = resposta['text']
-                app.logger.info(f"Resposta (send_document, caption=True): {resposta}")
-                send_document(resposta_documento, body, caption=resposta_texto)
+                if len(resposta_texto) > 1024:
+                    app.logger.info(f"Resposta (send_document e send_text_message): {resposta}")
+                    send_text_message(resposta_texto, body)
+                    send_document(resposta_documento, body)
+                else:
+                    app.logger.info(f"Resposta (send_document, caption=True): {resposta}")
+                    send_document(resposta_documento, body, caption=resposta_texto)
             else:
                 resposta = resposta['text']
                 app.logger.info(f"Resposta (send_text_message): {resposta}")
@@ -115,7 +131,7 @@ def process_message(body):
         # quando um novo usuário inicia uma conversa com o bot, a primeira mensagem é sempre '\start'
         if texto_recebido == '/start':
             return {'text': f'Olá, {nome_usuario}!\nEu sou o chatbot não-'
-                            'oficial de dúvidas da UACSA/UFRPE \U0001F601 \n. '
+                            'oficial para tirar dúvidas dos estudantes da UACSA/UFRPE \U0001F601 \n. '
                             'Todas as mensagens enviadas para mim serão '
                             'gravadas para, no futuro, melhorarmos as minhas '
                             'respostas. Em que posso ajudar?'}
