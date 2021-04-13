@@ -6,6 +6,8 @@ i_atestado_de_matricula:
           1- Entrar no SIGAA: https://sigs.ufrpe.br
           2- Realizar o login
           3- Dentro do menu "Ensino", clicar em "Emitir Atestado de Matrícula"
+    images:
+      - "atestado_de_matricula.png"
 i_declaracao_de_vinculo:
   responses:
     text:
@@ -27,6 +29,9 @@ i_estagio_tecnologo:
           Caso o estágio seja aprovado, a(o) aluna(o) será matriculada na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
 
           📩 Para mais informações sobre estágio, envie um email com sua dúvida para estagio.uacsa@ufrpe.br
+          📷 Para oportunidades de estágio, acesse o instagram da UACSA e da UFRPE:
+          instagram.com/uacsaufrpe
+          instagram.com/ufrpe
 i_estagio_bacharel:
   responses:
     text:
@@ -38,6 +43,9 @@ i_estagio_bacharel:
           Caso o estágio seja aprovado, a(o) aluna(o) será matriculada na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
 
           📩 Para mais informações sobre estágio, envie um email com sua dúvida para estagio.uacsa@ufrpe.br
+          📷 Para oportunidades de estágio, acesse o instagram da UACSA e da UFRPE:
+          instagram.com/uacsaufrpe
+          instagram.com/ufrpe
 i_tipo_de_estagio:
   responses:
     text:
@@ -96,3 +104,12 @@ i_despedidas:
     text:
       - "Tchau, espero que tenha te ajudado! \U0001F601"
       - "Tchau e até a próxima! \U0001F601"
+      - "Até logo! \nPara mais informações, não esqueça de seguir a UACSA no instagram \U0001F609 \n instagram.com/uacsaufrpe"
+i_agradecimento:
+  responses:
+    text:
+      - "Por nada, espero ter ajudado! \U0001F601"
+      - "Disponha! \U0001F601"
+      - "De nada! \U0001F609"
+      - "Fico feliz em ajudar!"
+      - "Não tem de quê! \U0001F609"

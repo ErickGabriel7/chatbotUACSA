@@ -3,7 +3,8 @@ i_declaracao_de_vinculo:
     - declaracao+vinculo
     - comprovante+vinculo
     - vinculo
-    - vinculad
+    - vinculado
+    - vinculada
 
 i_atestado_de_matricula:
   utterances:
@@ -45,15 +46,15 @@ i_dispensa:
 
 i_desligamento:
   utterances:
-    - desligad
+    - desligado
     - desligamento
     - desligar
-    - acompanhad
+    - acompanhado
     - acompanhamento
-    - jubilad
+    - jubilado
     - jubilamento
     - jubilar
-    - expuls
+    - expulsar
 
 i_calendario:
   utterances:
@@ -79,3 +80,11 @@ i_despedidas:
     - tchau
     - xau
     - até a próxima
+
+i_agradecimento:
+  utterances:
+    - obrigado
+    - obrigada
+    - valeu
+    - muito+obrigado
+    - muito+obrigada
