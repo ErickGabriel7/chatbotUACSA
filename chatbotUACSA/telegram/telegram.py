@@ -20,7 +20,7 @@ else:
 def receive_message():
     # pegando a mensagem com os dados que o telegram enviou
     body = request.json
-    app.logger.info(f"Chegou uma nova mensagem: {body}")
+    app.logger.debug(f"Chegou uma nova mensagem: {body}")
 
     resposta = process_message(body)
     send_answer(resposta, body)
@@ -35,10 +35,10 @@ def webhook():
         repo = git.Repo('chatbotUACSA/')
         origin = repo.remotes.origin
         origin.pull()
-        app.logger.info('Updated PythonAnywhere successfully')
+        app.logger.debug('Updated PythonAnywhere successfully')
         return 'Updated PythonAnywhere successfully', 200
     else:
-        app.logger.info('Wrong event type')
+        app.logger.debug('Wrong event type')
         return 'Wrong event type', 400
 
 
@@ -47,6 +47,7 @@ def send_answer(resposta, body):
     global there_is_img
     global there_is_text
     global there_is_doc
+    texto_recebido = body['message']['text']
     try:
         if resposta['text'] is not None:
             there_is_text = True
@@ -69,12 +70,14 @@ def send_answer(resposta, body):
                 resposta_texto = resposta['text']
                 resposta_documento = resposta['docs']
                 if len(resposta_texto) > 1024:
-                    app.logger.info(f"Resposta (send_photo, send_document e send_text_message): {resposta}")
+                    app.logger.info(
+                        f"Texto Recebido: {texto_recebido} \nResposta (send_photo, send_document e send_text_message): {resposta}")
                     send_text_message(resposta_texto, body)
                     send_photo(resposta_imagem, body)
                     send_document(resposta_documento, body)
                 else:
-                    app.logger.info(f"Resposta (send_photo e send_document, caption=True): {resposta}")
+                    app.logger.info(
+                        f"Texto Recebido: {texto_recebido} \nResposta (send_photo e send_document, caption=True): {resposta}")
                     send_photo(resposta_imagem, body, caption=resposta_texto)
                     send_document(resposta_documento, body)
 
@@ -82,42 +85,46 @@ def send_answer(resposta, body):
                 resposta_imagem = resposta['images']
                 resposta_texto = resposta['text']
                 if len(resposta_texto) > 1024:
-                    app.logger.info(f"Resposta (send_photo e send_text_message): {resposta}")
+                    app.logger.info(
+                        f"Texto Recebido: {texto_recebido} \nResposta (send_photo e send_text_message): {resposta}")
                     send_text_message(resposta_texto, body)
                     send_photo(resposta_imagem, body)
                 else:
-                    app.logger.info(f"Resposta (send_photo, caption=True): {resposta}")
+                    app.logger.info(
+                        f"Texto Recebido: {texto_recebido} \nResposta (send_photo, caption=True): {resposta}")
                     send_photo(resposta_imagem, body, caption=resposta_texto)
         else:
             if there_is_doc:
                 resposta_documento = resposta['docs']
                 resposta_texto = resposta['text']
                 if len(resposta_texto) > 1024:
-                    app.logger.info(f"Resposta (send_document e send_text_message): {resposta}")
+                    app.logger.info(
+                        f"Texto Recebido: {texto_recebido} \nResposta (send_document e send_text_message): {resposta}")
                     send_text_message(resposta_texto, body)
                     send_document(resposta_documento, body)
                 else:
-                    app.logger.info(f"Resposta (send_document, caption=True): {resposta}")
+                    app.logger.info(
+                        f"Texto Recebido: {texto_recebido} \nResposta (send_document, caption=True): {resposta}")
                     send_document(resposta_documento, body, caption=resposta_texto)
             else:
                 resposta = resposta['text']
-                app.logger.info(f"Resposta (send_text_message): {resposta}")
+                app.logger.info(f"Texto Recebido: {texto_recebido} \nResposta (send_text_message): {resposta}")
                 send_text_message(resposta, body)
     elif there_is_doc:
         resposta_documento = resposta['docs']
-        app.logger.info(f"Resposta (send_document): {resposta}")
+        app.logger.info(f"Texto Recebido: {texto_recebido} \nResposta (send_document): {resposta}")
         send_document(resposta_documento, body)
     else:
         if there_is_img:
             if there_is_doc:
                 resposta_documento = resposta['docs']
                 resposta_imagem = resposta['images']
-                app.logger.info(f"Resposta (send_photo e send_document): {resposta}")
+                app.logger.info(f"Texto Recebido: {texto_recebido} \nResposta (send_photo e send_document): {resposta}")
                 send_photo(resposta_imagem, body)
                 send_document(resposta_documento, body)
             else:
                 resposta_imagem = resposta['images']
-                app.logger.info(f"Resposta (send_photo): {resposta}")
+                app.logger.info(f"Texto Recebido: {texto_recebido} \nResposta (send_photo): {resposta}")
                 send_photo(resposta_imagem, body)
 
     pass
