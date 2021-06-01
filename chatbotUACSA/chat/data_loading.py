@@ -36,56 +36,63 @@ def evaluate_intent(text):
     return None
 
 
-def respond_intent(command):
+def respond_intent(intent):
     global there_is_img
     global there_is_text
     global there_is_doc
     result = None
     try:
-        if responses[command] is not None and responses[command]['responses'] is not None:
+        if responses[intent] is not None and responses[intent]['responses'] is not None:
             try:
-                if responses[command]['responses']['text'] is not None:
+                if responses[intent]['responses']['text'] is not None:
                     there_is_text = True
             except KeyError:
                 there_is_text = False
             try:
-                if responses[command]['responses']['images'] is not None:
+                if responses[intent]['responses']['images'] is not None:
                     there_is_img = True
             except KeyError:
                 there_is_img = False
             try:
-                if responses[command]['responses']['docs'] is not None:
+                if responses[intent]['responses']['docs'] is not None:
                     there_is_doc = True
             except KeyError:
                 there_is_doc = False
             if there_is_text:
                 if there_is_img:
                     if there_is_doc:
-                        result = {'text': random.choice(responses[command]['responses']['text']),
-                                  'images': random.choice(responses[command]['responses']['images']),
-                                  'docs': random.choice(responses[command]['responses']['docs'])
+                        result = {'text': random.choice(responses[intent]['responses']['text']),
+                                  'images': random.choice(responses[intent]['responses']['images']),
+                                  'docs': random.choice(responses[intent]['responses']['docs']),
+                                  'intent': intent
                                   }
                     else:
-                        result = {'text': random.choice(responses[command]['responses']['text']),
-                                  'images': random.choice(responses[command]['responses']['images'])
+                        result = {'text': random.choice(responses[intent]['responses']['text']),
+                                  'images': random.choice(responses[intent]['responses']['images']),
+                                  'intent': intent
                                   }
                 else:
                     if there_is_doc:
-                        result = {'text': random.choice(responses[command]['responses']['text']),
-                                  'docs': random.choice(responses[command]['responses']['docs'])
+                        result = {'text': random.choice(responses[intent]['responses']['text']),
+                                  'docs': random.choice(responses[intent]['responses']['docs']),
+                                  'intent': intent
                                   }
                     else:
-                        result = {'text': random.choice(responses[command]['responses']['text'])}
+                        result = {'text': random.choice(responses[intent]['responses']['text']),
+                                  'intent': intent}
             elif there_is_doc:
-                result = {'docs': random.choice(responses[command]['responses']['docs'])}
+                result = {'docs': random.choice(responses[intent]['responses']['docs']),
+                          'intent': intent}
             else:
                 if there_is_img:
                     if there_is_doc:
-                        result = {'docs': random.choice(responses[command]['responses']['docs']),
-                                  'images': random.choice(responses[command]['responses']['images'])
+                        result = {'docs': random.choice(responses[intent]['responses']['docs']),
+                                  'images': random.choice(responses[intent]['responses']['images']),
+                                  'intent': intent
                                   }
                     else:
-                        result = {'images': random.choice(responses[command]['responses']['images'])
+                        result = {'images': random.choice(responses[intent]['responses']['images']),
+                                  'intent': intent
                                   }
 
     except KeyError:

@@ -20,7 +20,7 @@ else:
 def receive_message():
     # pegando a mensagem com os dados que o telegram enviou
     body = request.json
-    app.logger.debug(f"Chegou uma nova mensagem: {body}")
+    app.logger.info(f"Chegou uma nova mensagem: {body}")
 
     resposta = process_message(body)
     send_answer(resposta, body)
@@ -69,62 +69,69 @@ def send_answer(resposta, body):
                 resposta_imagem = resposta['images']
                 resposta_texto = resposta['text']
                 resposta_documento = resposta['docs']
+                intent = resposta['intent']
                 if len(resposta_texto) > 1024:
                     app.logger.info(
-                        f"Texto Recebido: {texto_recebido} \nResposta (send_photo, send_document e send_text_message): {resposta}")
+                        f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo, send_document e send_text_message): {resposta}")
                     send_text_message(resposta_texto, body)
                     send_photo(resposta_imagem, body)
                     send_document(resposta_documento, body)
                 else:
                     app.logger.info(
-                        f"Texto Recebido: {texto_recebido} \nResposta (send_photo e send_document, caption=True): {resposta}")
+                        f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo e send_document, caption=True): {resposta}")
                     send_photo(resposta_imagem, body, caption=resposta_texto)
                     send_document(resposta_documento, body)
 
             else:
                 resposta_imagem = resposta['images']
                 resposta_texto = resposta['text']
+                intent = resposta['intent']
                 if len(resposta_texto) > 1024:
                     app.logger.info(
-                        f"Texto Recebido: {texto_recebido} \nResposta (send_photo e send_text_message): {resposta}")
+                        f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo e send_text_message): {resposta}")
                     send_text_message(resposta_texto, body)
                     send_photo(resposta_imagem, body)
                 else:
                     app.logger.info(
-                        f"Texto Recebido: {texto_recebido} \nResposta (send_photo, caption=True): {resposta}")
+                        f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo, caption=True): {resposta}")
                     send_photo(resposta_imagem, body, caption=resposta_texto)
         else:
             if there_is_doc:
                 resposta_documento = resposta['docs']
                 resposta_texto = resposta['text']
+                intent = resposta['intent']
                 if len(resposta_texto) > 1024:
                     app.logger.info(
-                        f"Texto Recebido: {texto_recebido} \nResposta (send_document e send_text_message): {resposta}")
+                        f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_document e send_text_message): {resposta}")
                     send_text_message(resposta_texto, body)
                     send_document(resposta_documento, body)
                 else:
                     app.logger.info(
-                        f"Texto Recebido: {texto_recebido} \nResposta (send_document, caption=True): {resposta}")
+                        f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_document, caption=True): {resposta}")
                     send_document(resposta_documento, body, caption=resposta_texto)
             else:
                 resposta = resposta['text']
-                app.logger.info(f"Texto Recebido: {texto_recebido} \nResposta (send_text_message): {resposta}")
+                intent = resposta['intent']
+                app.logger.info(f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_text_message): {resposta}")
                 send_text_message(resposta, body)
     elif there_is_doc:
         resposta_documento = resposta['docs']
-        app.logger.info(f"Texto Recebido: {texto_recebido} \nResposta (send_document): {resposta}")
+        intent = resposta['intent']
+        app.logger.info(f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_document): {resposta}")
         send_document(resposta_documento, body)
     else:
         if there_is_img:
             if there_is_doc:
                 resposta_documento = resposta['docs']
                 resposta_imagem = resposta['images']
-                app.logger.info(f"Texto Recebido: {texto_recebido} \nResposta (send_photo e send_document): {resposta}")
+                intent = resposta['intent']
+                app.logger.info(f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo e send_document): {resposta}")
                 send_photo(resposta_imagem, body)
                 send_document(resposta_documento, body)
             else:
                 resposta_imagem = resposta['images']
-                app.logger.info(f"Texto Recebido: {texto_recebido} \nResposta (send_photo): {resposta}")
+                intent = resposta['intent']
+                app.logger.info(f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo): {resposta}")
                 send_photo(resposta_imagem, body)
 
     pass
@@ -141,11 +148,13 @@ def process_message(body):
                             'oficial para tirar dúvidas dos estudantes da UACSA/UFRPE \U0001F601 \n. '
                             'Todas as mensagens enviadas para mim serão '
                             'gravadas para, no futuro, melhorarmos as minhas '
-                            'respostas. Em que posso ajudar?'}
+                            'respostas. Em que posso ajudar?',
+                    'intent': 'None'}
         return create_answer(texto_recebido)
     else:
         return {'text': f'Desculpe, só processo mensagens de texto por '
-                        f'enquanto \U00002639'}
+                        f'enquanto \U00002639',
+                'intent': 'None'}
 
 
 def send_text_message(text, body):
