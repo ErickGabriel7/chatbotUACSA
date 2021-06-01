@@ -49,6 +49,10 @@ def send_answer(resposta, body):
     global there_is_doc
     texto_recebido = body['message']['text']
     try:
+        intent = resposta['intent']
+    except TypeError:
+        intent = 'None'
+    try:
         if resposta['text'] is not None:
             there_is_text = True
     except KeyError:
@@ -69,7 +73,7 @@ def send_answer(resposta, body):
                 resposta_imagem = resposta['images']
                 resposta_texto = resposta['text']
                 resposta_documento = resposta['docs']
-                intent = resposta['intent']
+
                 if len(resposta_texto) > 1024:
                     app.logger.info(
                         f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo, send_document e send_text_message): {resposta}")
@@ -85,7 +89,7 @@ def send_answer(resposta, body):
             else:
                 resposta_imagem = resposta['images']
                 resposta_texto = resposta['text']
-                intent = resposta['intent']
+
                 if len(resposta_texto) > 1024:
                     app.logger.info(
                         f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo e send_text_message): {resposta}")
@@ -99,7 +103,7 @@ def send_answer(resposta, body):
             if there_is_doc:
                 resposta_documento = resposta['docs']
                 resposta_texto = resposta['text']
-                intent = resposta['intent']
+
                 if len(resposta_texto) > 1024:
                     app.logger.info(
                         f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_document e send_text_message): {resposta}")
@@ -111,12 +115,13 @@ def send_answer(resposta, body):
                     send_document(resposta_documento, body, caption=resposta_texto)
             else:
                 resposta = resposta['text']
-                intent = resposta['intent']
-                app.logger.info(f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_text_message): {resposta}")
+
+                app.logger.info(
+                    f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_text_message): {resposta}")
                 send_text_message(resposta, body)
     elif there_is_doc:
         resposta_documento = resposta['docs']
-        intent = resposta['intent']
+
         app.logger.info(f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_document): {resposta}")
         send_document(resposta_documento, body)
     else:
@@ -124,14 +129,16 @@ def send_answer(resposta, body):
             if there_is_doc:
                 resposta_documento = resposta['docs']
                 resposta_imagem = resposta['images']
-                intent = resposta['intent']
-                app.logger.info(f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo e send_document): {resposta}")
+
+                app.logger.info(
+                    f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo e send_document): {resposta}")
                 send_photo(resposta_imagem, body)
                 send_document(resposta_documento, body)
             else:
                 resposta_imagem = resposta['images']
-                intent = resposta['intent']
-                app.logger.info(f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo): {resposta}")
+
+                app.logger.info(
+                    f"Texto Recebido: {texto_recebido} \nIntent: {intent}\nResposta (send_photo): {resposta}")
                 send_photo(resposta_imagem, body)
 
     pass
