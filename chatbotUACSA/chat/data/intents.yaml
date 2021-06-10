@@ -88,3 +88,9 @@ i_agradecimento:
     - valeu
     - muito+obrigado
     - muito+obrigada
+i_atividades_extra_curriculares:
+  utterances:
+    - atividade+complementar
+    - atividade+extra+curricular
+    - atividades+autônomas
+    - carga+horária+complementar

@@ -5,7 +5,7 @@ i_atestado_de_matricula:
           📃 Você pode pegar o seu **Atestado de Matrícula** no SIGAA, seguindo esses passos:
           1- Entrar no SIGAA: https://sigs.ufrpe.br
           2- Realizar o login
-          3- Dentro do menu "Ensino", clicar em "Emitir Atestado de Matrícula"
+          3- Dentro do menu "Ensino", clicar em "Emitir Atestado de Matrícula Para Período Suplementar"
     images:
       - "atestado_de_matricula.png"
 i_declaracao_de_vinculo:
@@ -23,7 +23,7 @@ i_estagio_tecnologo:
     text:
       - |
           O Estágio Supervisionado Obrigatório (ESO) deve ser realizado em organizações que atuem na área do curso. A(o) aluna(o) precisa também atender pré-requisitos de carga horária concluída e/ou de disciplinas, que são diferentes para cada curso. Caso atenda esses requisitos, a(o) aluna(o) poderá oficializar o estágio enviando a documentação para estagio.uacsa@ufrpe.br:
-          1- Termo de compromisso de estágio obrigatório ou termo aditivo;
+          1- Termo de compromisso de estágio obrigatório(caso deseje iniciar estágio) ou termo aditivo(caso deseje renovar);
           2- Plano individual de estágio.
 
           Caso o estágio seja aprovado, a(o) aluna(o) será matriculada na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
@@ -37,7 +37,7 @@ i_estagio_bacharel:
     text:
       - |
           O Estágio Supervisionado Obrigatório (ESO) deve ser realizado em organizações que atuem na área do curso. A(o) aluna(o) precisa também atender pré-requisitos de carga horária concluída e/ou de disciplinas, que são diferentes para cada curso. Caso atenda esses requisitos, a(o) aluna(o) poderá oficializar o estágio enviando a documentação para estagio.uacsa@ufrpe.br:
-          1- Termo de compromisso de estágio obrigatório ou termo aditivo;
+          1- Termo de compromisso de estágio obrigatório (caso deseje iniciar estágio) ou termo aditivo (caso deseje renovar);
           2- Plano individual de estágio.
 
           Caso o estágio seja aprovado, a(o) aluna(o) será matriculada na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
@@ -59,16 +59,12 @@ i_dispensa:
           Quando se pede a dispensa de uma disciplina, ela é analisada por professores da UACSA, que vão avaliar se a dispensa pode ser feita ou não levando em conta o seguinte:
           1- A carga horária da disciplina cursada é igual ou maior do que a carga horária da disciplina a ser dispensada?
           2- O conteúdo das disciplinas é realmente equivalente (pelo menos 80% iguais)?
+          3- A disciplina é ofertada regularmente?
 
           **COMO PEDIR A DISPENSA?**
-          Para pedir a dispensa de uma ou mais disciplinas você deve enviar para a coordenação esse requerimento 👆, preenchido, junto com a documentação da faculdade que você cursou: histórico com notas e o conteúdo programático de cada disciplina. O processo costuma demorar entre 1 e 2 meses, por isso é importante fazer a solicitação com antecedência.
+          Para pedir a dispensa de uma ou mais disciplinas você deve enviar para processo.uacsa@ufrpe.br esse requerimento 👆, preenchido, junto com a documentação da faculdade que você cursou : histórico com notas e o conteúdo programático de cada disciplina. O processo costuma demorar entre 1 e 2 meses, por isso é importante fazer a solicitação com antecedência e continuar matriculado na disciplina até finalização do processo.
 
-          📩 Para mais informações entre em contato com a coordenação do seu curso:
-          coordenacao.civil.uacsa@ufrpe.br
-          coordenacao.materiais.uacsa@ufrpe.br
-          coordenacao.eletrica.uacsa@ufrpe.br
-          coordenacao.eletronica.uacsa@ufrpe.br
-          coordenacao.mecanica.uacsa@ufrpe.br
+          📩 Para mais informações entre em contato com escolaridade.uacsa@ufrpe.br
     docs:
       - "dispensa_de_disciplinas2.pdf"
 i_desligamento:
@@ -92,6 +88,19 @@ i_calendario:
           Esse é o calendário acadêmico da UFRPE 👆
     docs:
       - "i_calendario1.pdf"
+i_atividades_extra_curriculares:
+  responses:
+    text:
+      - |
+        Para realizar o registro das de carga horária das atividades extra curriculares:
+                 1- Acesse://sigs.ufrpe.br/sigaa e faça o login com seu usuário e senha;
+                 2- Selecione a opção ENSINO > REGISTRO DE ATIVIDADES AUTÔNOMAS > CADASTRAR NOVO REGISTRO;
+                 3- Anexe cada certificado  individualmente em formato .pdf e siga os passos indicados;
+                 4- Pronto! Esses arquivos serão analisados pela coordenação do seu curso e você poderá conferir o resultado dessas solicitações no próprio sistema.
+
+                 📩 Para mais informações, entre em contato com escolaridade.uacsa@ufrpe.br
+    images:
+      - "i_atividades_extra_curriculares.png"
 i_saudacoes:
   responses:
     text:
