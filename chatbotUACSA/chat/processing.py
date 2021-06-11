@@ -8,8 +8,8 @@ def create_answer(input_text):
     if intent is None:
         return {'text': 'Puxa, ainda não sei te informar sobre isso. '
                         'Atualmente só posso ajudar com informações sobre '
-                        'comprovantes, estágio, desligamento, calendário e '
-                        'dispensa de disciplinas.',
+                        'declarações, estágio, desligamento, calendário , '
+                        'dispensa de disciplinas e atividades extra curriculares.',
                 'intent': 'None'}
     else:
         response = respond_intent(intent)

@@ -26,7 +26,7 @@ i_estagio_tecnologo:
           1- Termo de compromisso de estágio obrigatório(caso deseje iniciar estágio) ou termo aditivo(caso deseje renovar);
           2- Plano individual de estágio.
 
-          Caso o estágio seja aprovado, a(o) aluna(o) será matriculada na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
+          Caso o estágio seja aprovado, a(o) aluna(o) será matriculada(o) na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
 
           📩 Para mais informações sobre estágio, envie um email com sua dúvida para estagio.uacsa@ufrpe.br
           📷 Para oportunidades de estágio, acesse o instagram da UACSA e da UFRPE:
@@ -40,7 +40,7 @@ i_estagio_bacharel:
           1- Termo de compromisso de estágio obrigatório (caso deseje iniciar estágio) ou termo aditivo (caso deseje renovar);
           2- Plano individual de estágio.
 
-          Caso o estágio seja aprovado, a(o) aluna(o) será matriculada na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
+          Caso o estágio seja aprovado, a(o) aluna(o) será matriculada(o) na disciplina de estágio, onde deverá enviar relatórios periódicos para o(a) professor(a) responsável pela disciplina.
 
           📩 Para mais informações sobre estágio, envie um email com sua dúvida para estagio.uacsa@ufrpe.br
           📷 Para oportunidades de estágio, acesse o instagram da UACSA e da UFRPE:
@@ -92,8 +92,8 @@ i_atividades_extra_curriculares:
   responses:
     text:
       - |
-        Para realizar o registro das de carga horária das atividades extra curriculares:
-                 1- Acesse://sigs.ufrpe.br/sigaa e faça o login com seu usuário e senha;
+        Para realizar o registro de carga horária das atividades extra curriculares:
+                 1- Acesse https://sigs.ufrpe.br/sigaa e faça o login com seu usuário e senha;
                  2- Selecione a opção ENSINO > REGISTRO DE ATIVIDADES AUTÔNOMAS > CADASTRAR NOVO REGISTRO;
                  3- Anexe cada certificado  individualmente em formato .pdf e siga os passos indicados;
                  4- Pronto! Esses arquivos serão analisados pela coordenação do seu curso e você poderá conferir o resultado dessas solicitações no próprio sistema.
