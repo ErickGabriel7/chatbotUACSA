@@ -146,23 +146,27 @@ def send_answer(resposta, body):
 
 
 def process_message(body):
+    mensagem_erro = {'text': f'Desculpe, só processo mensagens de texto por '
+                             f'enquanto \U00002639',
+                     'intent': 'None'}
     # verificando se a mensagem é um texto
-    if 'text' in body['message']:
-        texto_recebido = body['message']['text']
-        nome_usuario = body['message']['from']['first_name']
-        # quando um novo usuário inicia uma conversa com o bot, a primeira mensagem é sempre '\start'
-        if texto_recebido == '/start':
-            return {'text': f'Olá, {nome_usuario}!\nEu sou o chatbot não-'
-                            'oficial para tirar dúvidas dos estudantes da UACSA/UFRPE \U0001F601 \n. '
-                            'Todas as mensagens enviadas para mim serão '
-                            'gravadas para, no futuro, melhorarmos as minhas '
-                            'respostas. Em que posso ajudar?',
-                    'intent': 'None'}
-        return create_answer(texto_recebido)
-    else:
-        return {'text': f'Desculpe, só processo mensagens de texto por '
-                        f'enquanto \U00002639',
-                'intent': 'None'}
+    try:
+        if 'text' in body['message']:
+            texto_recebido = body['message']['text']
+            nome_usuario = body['message']['from']['first_name']
+            # quando um novo usuário inicia uma conversa com o bot, a primeira mensagem é sempre '\start'
+            if texto_recebido == '/start':
+                return {'text': f'Olá, {nome_usuario}!\nEu sou o chatbot não-'
+                                'oficial para tirar dúvidas dos estudantes da UACSA/UFRPE \U0001F601 \n. '
+                                'Todas as mensagens enviadas para mim serão '
+                                'gravadas para, no futuro, melhorarmos as minhas '
+                                'respostas. Em que posso ajudar?',
+                        'intent': 'None'}
+            return create_answer(texto_recebido)
+        else:
+            return mensagem_erro
+    except KeyError:
+        return mensagem_erro
 
 
 def send_text_message(text, body):
