@@ -23,7 +23,11 @@ def receive_message():
     app.logger.info(f"Chegou uma nova mensagem: {body}")
 
     resposta = process_message(body)
-    send_answer(resposta, body)
+    try:
+        if resposta['error'] is not None:
+            app.logger.info('***ERRO*** Mensagem do usuário vazia!')
+    except:
+        send_answer(resposta, body)
 
     # falar para o telegram que tudo ocorreu bem
     return {'ok': True}
@@ -146,9 +150,6 @@ def send_answer(resposta, body):
 
 
 def process_message(body):
-    mensagem_erro = {'text': f'Desculpe, só processo mensagens de texto por '
-                             f'enquanto \U00002639',
-                     'intent': 'None'}
     # verificando se a mensagem é um texto
     try:
         if 'text' in body['message']:
@@ -157,16 +158,18 @@ def process_message(body):
             # quando um novo usuário inicia uma conversa com o bot, a primeira mensagem é sempre '\start'
             if texto_recebido == '/start':
                 return {'text': f'Olá, {nome_usuario}!\nEu sou o chatbot não-'
-                                'oficial para tirar dúvidas dos estudantes da UACSA/UFRPE \U0001F601 \n. '
+                                'oficial para tirar dúvidas dos estudantes da UACSA/UFRPE \U0001F601 \n'
                                 'Todas as mensagens enviadas para mim serão '
                                 'gravadas para, no futuro, melhorarmos as minhas '
                                 'respostas. Em que posso ajudar?',
                         'intent': 'None'}
             return create_answer(texto_recebido)
         else:
-            return mensagem_erro
+            return {'text': f'Desculpe, só processo mensagens de texto por '
+                             f'enquanto \U00002639',
+                     'intent': 'None'}
     except KeyError:
-        return mensagem_erro
+        return {'error:' 'Sem mensagem'}
 
 
 def send_text_message(text, body):
